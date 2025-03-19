@@ -1,0 +1,24 @@
+<div class="max-h-[3em] relative">
+    <img src="colorScheme.png" alt="Color Scheme" class="max-h-[3em] cursor-pointer" (click)="toggle()">
+    <div class="absolute top-15 right-0">
+        <div 
+        [ngClass]="{
+            'hidden': !seeColorScheme(),
+        }"
+        class="text-nowrap flex flex-col gap-2 rounded-md bg-(--secondary) text-(--accent) font-bold
+        before:content-[''] before:w-5 before:h-5 before:bg-(--secondary) before:absolute before:right-[14px] before:top-1 before:-translate-y-1/2 before:rotate-45 before:bg-(--accent)
+        transition-all">
+            <div class="p-5">
+                <div (click)="setDarkMode()" class="cursor-pointer">
+                    <h1>Dark Mode</h1>
+                </div>
+                <div (click)="setLightMode()" class="cursor-pointer">
+                    <h1>Light Mode</h1>
+                </div>
+                <div (click)="setAutoDarkMode()" class="cursor-pointer">
+                    <h1>Auto</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

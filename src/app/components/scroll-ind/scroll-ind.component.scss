@@ -1,0 +1,60 @@
+#scroll > span {
+    animation: scrollBob 6s ease-in-out infinite;
+}
+
+#scroll > span:first-child {
+    animation-delay: 5.0725s;
+}
+#scroll > span:nth-child(2) {
+    animation-delay: 5.145s;
+}
+#scroll > span:nth-child(3) {
+    animation-delay: 5.2175s;
+}
+#scroll > span:nth-child(4) {
+    animation-delay: 5.29s;
+}
+#scroll > span:nth-child(5) {
+    animation-delay: 5.3625s;
+}
+#scroll > span:nth-child(6) {
+    animation-delay: 5.435s;
+}
+
+@keyframes scrollBob {
+    0%, 10% {
+        transform: none;
+        opacity: .65;
+        color: var(--primary);
+    }
+
+    1%, 8% {
+        transform: translateY(-2px) scale(1.2);
+        opacity: 1;
+        color: var(--highlight);
+    }
+
+    4% {
+        transform: translateY(3px);
+        opacity: .65;
+        color: var(--primary);
+    }
+}
+
+.indicator {
+    background: linear-gradient(var(--primary), 30%, var(--highlight), 40%, var(--primary), 70%, var(--highlight), 80% , var(--primary));
+    animation: scrollInd 6s ease-in-out infinite;
+    background-size: 400% 400%;
+    animation-delay: 5.1s;
+}
+
+@keyframes scrollInd {
+    0%{
+        background-position: 100% 100%;
+    }
+    
+    20%{
+        background-position: 0% 0%;
+
+    }
+}
