@@ -1,7 +1,14 @@
-<app-header></app-header>
-<div class="h-dvh !h-[100dvh]">
-    <div class="flex flex-col h-full justify-between items-center space-bewteen">
-        <h1 class="">Nicolas Walter</h1>
-        <app-scroll-ind class="grow-1 self-end pr-[20%]"></app-scroll-ind>
+<div class="h-dvh">
+    <app-header></app-header>
+    <!-- <div class="h-5"></div> -->
+    <div class="flex flex-col sm:flex-row h-full justify-around items-center sm:items-start md:items-center sm:p-10">
+        <div class="flex justify-center items-center sm:items-start text-center sm:text-start flex-col gap-5 text-(--primary) my-20 sm:my-0">
+            <div class="grid font-mono">
+                <!-- <h1 class="font-thin text-2xl md:text-4xl md:leading-15 overflow-hidden w-[16ch]"><p class="text-nowrap w-0 overflow-hidden animate-typing-top">Hi, my</p><p class="w-0 overflow-hidden animate-typing-bottom">name is <b class="font-black text-(--highlight)">Nicolas</b><span>.</span></p></h1> -->
+                <h1 class="font-thin text-2xl md:text-4xl md:leading-15 overflow-hidden w-[16ch]"><p class="w-0 mx-auto sm:mx-0 text-nowrap overflow-hidden animate-typing-top">Hi, my</p><p class="w-0 mx-auto sm:mx-0 text-nowrap overflow-hidden animate-typing-bottom">name is <b class="font-black text-(--highlight)">Nicolas</b><span>.</span></p></h1>
+            </div>
+            <p class="lg:text-lg animate-flyin overflow-hidden">I'm <b>studying computer science</b><br>at the university of Würzburg, Germany.</p>
+        </div>
+        <app-scroll-ind class="grow-1 sm:grow-0 self-end pr-[20%] lg:pr-0 h-full md:pt-30"></app-scroll-ind>
     </div>
 </div>

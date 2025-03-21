@@ -15,7 +15,7 @@ import { setThrowInvalidWriteToSignalError } from '@angular/core/primitives/sign
 export class ColorSchemeComponent {
   seeColorScheme = signal(false);
 
-  constructor(private themeService: ThemeService) { }
+  constructor(private themeService: ThemeService) {  }
 
   toggle() {
     this.seeColorScheme.set(!this.seeColorScheme());

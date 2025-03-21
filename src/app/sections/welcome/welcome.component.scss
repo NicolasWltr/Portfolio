@@ -1,0 +1,66 @@
+.animate-typing-top {
+    animation: typing-top 1s forwards, blink 0.5s step-end infinite;
+    animation-delay: 1s;
+}
+
+@keyframes typing-top {
+    0%, 10% {
+        width: 0;
+    }
+
+    11%, 20% {
+        width: 1ch;
+    }
+
+    21%, 30% {
+        width: 2ch;
+    }
+
+    31%, 70% {
+        width: 3ch;
+    }
+
+    71%, 80% {
+        width: 4ch;
+    }
+
+    81%, 90% {
+        width: 5ch;
+    }
+
+    91%, 100% {
+        width: 6ch;
+    }
+}
+
+.animate-typing-bottom {
+    animation: typing-bottom 1s steps(16) forwards, blink 0.5s step-end infinite;
+    animation-delay: 2s;
+}
+
+@keyframes typing-bottom {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%; /* Reveal the full line */
+    }
+}
+
+
+.animate-flyin {
+    animation: fly-in 1s forwards;
+    animation-delay: 3.5s;
+    opacity: 0;
+}
+
+@keyframes fly-in {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
