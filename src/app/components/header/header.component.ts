@@ -28,9 +28,9 @@ export class HeaderComponent {
   onScroll(event: Event) {
     const scrollY = window.scrollY;
     
-    if (scrollY < this.header.nativeElement.offsetHeight) return;
-
+    
     if (scrollY > this.prevScroll) {
+      if (scrollY < this.header.nativeElement.offsetHeight) return;
       this.header.nativeElement.style.transform = "translateY(-200%)";
       this.name.nativeElement.style.maxWidth = "0rem";
     } else {

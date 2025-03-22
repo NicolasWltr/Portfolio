@@ -1,0 +1,35 @@
+.animate-smallping {
+    animation: smallping 1s infinite;
+}
+
+@keyframes smallping {
+    75%, 100% {
+        transform: scale(1.05);
+        opacity: 0;
+    }
+}
+
+.animate-move {
+    animation: move 10s infinite;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0%);
+    }
+    10% {
+        transform: translateX(20%);
+    }
+    50% {
+        transform: translateX(-20%);
+    }
+    65% {
+        transform: translateX(20%);
+    }
+    80% {
+        transform: translateX(-20%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}

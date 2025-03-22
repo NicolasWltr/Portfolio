@@ -6,7 +6,6 @@ import { ScrollIndComponent } from '../../components/scroll-ind/scroll-ind.compo
   selector: 'app-welcome',
   standalone: true,
   imports: [
-    HeaderComponent,
     ScrollIndComponent
   ],
   templateUrl: './welcome.component.html',
