@@ -26,17 +26,23 @@ export class HeaderComponent {
 
   @HostListener('window:scroll', ['$event'])
   onScroll(event: Event) {
-    const scrollY = window.scrollY;
+    let scrollY = window.scrollY;
     
-    
+    if (scrollY > (document.body.offsetHeight - window.innerHeight)) {
+      scrollY = window.innerHeight;
+      console.log("no");
+    }
+
     if (scrollY > this.prevScroll) {
+      this.prevScroll = scrollY;
       if (scrollY < this.header.nativeElement.offsetHeight) return;
       this.header.nativeElement.style.transform = "translateY(-200%)";
       this.name.nativeElement.style.maxWidth = "0rem";
     } else {
+      if (this.prevScroll - 50 < scrollY) return;
       this.header.nativeElement.style.transform = "";
       this.name.nativeElement.style.maxWidth = "";
+      this.prevScroll = scrollY;
     }
-    this.prevScroll = scrollY;
   }
 }
