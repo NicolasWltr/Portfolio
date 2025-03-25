@@ -53,7 +53,6 @@ export class SideNavigationComponent implements AfterViewInit{
   calcOpacity() {
     this.side.forEach((side, index) => {
       let opacity = 1 - (Math.abs(this.currentSection() - index) / 3);
-      console.log(opacity);
       side.nativeElement.style.opacity = opacity
       side.nativeElement.style.fontWeight = opacity === 1 ? "900" : opacity > 0.5 ? "500" : "100";
     });
