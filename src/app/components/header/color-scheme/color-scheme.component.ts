@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
-import { ThemeService } from '../../../injects/theme.service';
-import { setThrowInvalidWriteToSignalError } from '@angular/core/primitives/signals';
+import { ThemeService } from '../../../injects/theme/theme.service';
 
 @Component({
   selector: 'app-color-scheme',

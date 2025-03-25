@@ -1,5 +1,19 @@
-<div class="max-w-[130rem] mx-auto">
-  <app-header class="fixed top-1 md:top-5 z-100 w-full max-w-[130rem]"></app-header>
+<div class="max-w-[130rem] mx-auto relative">
+  
   <app-welcome></app-welcome>
-  <app-construction class="overflow-hidden"></app-construction>
-</div>
+  <app-construction #section id="1" class="overflow-hidden"></app-construction>
+  <div id="2" #section class="h-dvh bg-blue-900 w-full"></div>
+  <div id="3" #section class="h-dvh bg-yellow-900 w-full"></div>
+  <div id="4" #section class="h-dvh bg-green-900 w-full"></div>
+  <div id="5" #section class="h-dvh bg-orange-900 w-full"></div>
+  <div id="6" #section class="h-dvh bg-black w-full"></div>
+  <div id="7" #section class="h-dvh bg-gray-200 w-full"></div>
+  <div id="8" #section class="h-dvh bg-red-900 w-full"></div>
+  <div id="9" #section class="h-dvh bg-blue-900 w-full"></div>
+  
+
+  <div>
+    <app-header class="fixed top-1 md:top-5 z-100 w-full max-w-[130rem]"></app-header>
+    <app-side-navigation class="hidden md:block"></app-side-navigation>
+  </div>
+</div>  
