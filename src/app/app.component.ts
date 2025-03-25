@@ -21,9 +21,6 @@ import { SideNavService } from './injects/sideNav/side-nav.service';
 export class AppComponent {
   title = 'portfolio';
 
-  // @ViewChild('welcomeRef', { read: ElementRef }) welcomeElement!: ElementRef;
-  // @ViewChild('constructionRef', { read: ElementRef }) constructionElement!: ElementRef;
-
   @ViewChildren('section', {read: ElementRef}) sections!: QueryList<ElementRef>;
 
   constructor(private sideNav: SideNavService) { 
@@ -32,15 +29,12 @@ export class AppComponent {
 
   @HostListener('window:scroll', ['$event'])
   onScroll(event: Event) {
-    let searchedIndex = 0;
     let currentIndex = 0;
 
-    this.sections.forEach(section => {
+    this.sections.forEach((section, index) => {
       if (section.nativeElement.offsetTop - window.scrollY < window.innerHeight / 2) {
-        currentIndex = searchedIndex;
+        currentIndex = index;
       }
-      
-      searchedIndex++;
     });
     this.sideNav.currentSection.set(currentIndex);
   }

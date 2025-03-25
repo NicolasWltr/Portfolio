@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, HostListener, signal, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, QueryList, signal, ViewChild, ViewChildren } from '@angular/core';
 import { SideNavService } from '../../injects/sideNav/side-nav.service';
 
 @Component({
@@ -11,13 +11,15 @@ import { SideNavService } from '../../injects/sideNav/side-nav.service';
   styleUrl: './side-navigation.component.scss'
 })
 export class SideNavigationComponent implements AfterViewInit{
-  rotation = signal(0);
+  currentSection = signal(0);
 
   @ViewChild('sideNav') sideNav!: ElementRef;
   @ViewChild('rotate') rotate!: ElementRef;
+
+  @ViewChildren('side', { read: ElementRef }) side!: QueryList<ElementRef>;
   
   constructor(private sideNavService: SideNavService) {
-    this.rotation = this.sideNavService.currentSection;
+    this.currentSection = this.sideNavService.currentSection;
   }
 
   ngAfterViewInit(): void {
@@ -33,7 +35,7 @@ export class SideNavigationComponent implements AfterViewInit{
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
     this.positionSideNav();
-    console.log("hi");
+    this.rotateSideNav();
   }
 
   positionSideNav() {
@@ -43,6 +45,17 @@ export class SideNavigationComponent implements AfterViewInit{
   }
 
   rotateSideNav() {
-    this.rotate.nativeElement.style.transform = `rotate(${this.rotation() * 15}deg)`;
+    this.rotate.nativeElement.style.transform = `rotate(${this.currentSection() * 15}deg)`;
+
+    this.calcOpacity();
+  }
+
+  calcOpacity() {
+    this.side.forEach((side, index) => {
+      let opacity = 1 - (Math.abs(this.currentSection() - index) / 3);
+      console.log(opacity);
+      side.nativeElement.style.opacity = opacity
+      side.nativeElement.style.fontWeight = opacity === 1 ? "900" : opacity > 0.5 ? "500" : "100";
+    });
   }
 }
