@@ -34,7 +34,7 @@ export class AppComponent {
     let currentIndex = 0;
 
     this.sections.forEach((section, index) => {
-      if (section.nativeElement.offsetTop - window.scrollY < window.innerHeight / 2) {
+      if (section.nativeElement.offsetTop - window.scrollY < window.innerHeight / 2 || (section.nativeElement.offsetTop + section.nativeElement.children[0]!.offsetHeight - (window.scrollY + window.innerHeight)) < 20) {
         currentIndex = index;
       }
     });
