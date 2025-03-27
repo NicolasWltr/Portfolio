@@ -4,6 +4,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { ConstructionComponent } from './sections/construction/construction.component';
 import { SideNavigationComponent } from "./components/side-navigation/side-navigation.component";
 import { SideNavService } from './injects/sideNav/side-nav.service';
+import { ExperienceComponent } from './sections/experience/experience.component';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,8 @@ import { SideNavService } from './injects/sideNav/side-nav.service';
     HeaderComponent,
     ConstructionComponent,
     SideNavigationComponent,
-    SideNavigationComponent
+    SideNavigationComponent,
+    ExperienceComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

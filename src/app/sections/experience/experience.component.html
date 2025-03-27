@@ -1,0 +1,42 @@
+<div class="w-full p-10 overflow-hidden text-(--primary)">
+    <div class="h-full flex flex-col lg:grid lg:grid-cols-2 place-items-start bg-(--accent) rounded-xl shadow-md shadow-(color:--highlight) ring-(--highlight)
+    [&>*]:p-5 sm:[&>*]:p-10">
+        <div class="flex flex-col justify-center items-start w-full">
+            <h1 class="text-3xl md:text-4xl xl:text-5xl font-bold underline decoration-(--highlight) decoration-3 underline-offset-5 md:underline-offset-8 xl:underline-offset-10 pb-5">Education</h1>
+            
+            <div *ngFor="let edu of education"
+            class="border-l-5 relative  border-(--secondary) pb-5">
+                <div class="absolute top-5 left-0 transform-[translate(-65%,0%)] md:transform-[translate(-60%,0%)]">
+                    <div class="h-4 md:h-5 aspect-square bg-(--highlight) rotate-45 border-3 border-(--secondary)"></div>
+                </div>
+                <div class="pl-5 md:pl-10 pt-5 text-sm sm:text-md md:text-xl md:pt-4 2xl:text-2xl">
+                    <h1 class="font-bold">{{ edu.degree }}<span class="hidden sm:inline lg:hidden xl:inline"> – </span><br class="sm:hidden lg:inline xl:hidden"/>{{ edu.name }}</h1>
+                    <p class="pl-5">{{ edu.start }} – {{ edu.end }}</p>
+                    <ol  class="pl-10 2xl:pl-11 pt-3 list-disc">
+                        <li *ngFor="let info of edu.infos">{{ info }}</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col justify-center items-start w-full">
+            <h1 class="text-2xl md:text-4xl xl:text-5xl font-bold underline decoration-(--highlight) decoration-3 underline-offset-5 md:underline-offset-8 xl:underline-offset-10 pb-5">Work Experience</h1>
+            
+            <div *ngFor="let work of workExperience"
+            class="border-l-5 relative  border-(--secondary) pb-5">
+                <div class="absolute top-5 left-0 transform-[translate(-65%,0%)] md:transform-[translate(-60%,0%)]">
+                    <div class="h-4 md:h-5 aspect-square bg-(--highlight) rotate-45 border-3 border-(--secondary)"></div>
+                </div>
+                <div class="pl-5 md:pl-10 pt-5 text-sm sm:text-md md:text-xl md:pt-4 2xl:text-2xl">
+                    <h1 class="font-bold">{{ work.name }}<span class="hidden sm:inline lg:hidden xl:inline"> – </span><br class="sm:hidden lg:inline xl:hidden"/>{{ work.company }}</h1>
+
+                    <ng-container *ngIf="work.end !== null; then thenBlock; else elseBlock"></ng-container>
+                    <ng-template #thenBlock><p class="pl-5">{{ work.start }} – {{ work.end }}</p></ng-template>
+                    <ng-template #elseBlock><p class="pl-5">{{ work.start }}</p></ng-template>
+                    <ol  class="pl-10 2xl:pl-11 pt-3 list-disc">
+                        <li *ngFor="let task of work.tasks">{{ task }}</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
