@@ -1,15 +1,17 @@
-import { Component, ElementRef, HostListener, Query, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { Component, ElementRef, HostListener, isDevMode, Query, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { WelcomeComponent } from './sections/welcome/welcome.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ConstructionComponent } from './sections/construction/construction.component';
 import { SideNavigationComponent } from "./components/side-navigation/side-navigation.component";
 import { SideNavService } from './injects/sideNav/side-nav.service';
 import { ExperienceComponent } from './sections/experience/experience.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
+    CommonModule,
     WelcomeComponent,
     HeaderComponent,
     ConstructionComponent,
@@ -23,10 +25,11 @@ import { ExperienceComponent } from './sections/experience/experience.component'
 export class AppComponent {
   title = 'portfolio';
 
+  dev = isDevMode;
+
   @ViewChildren('section', {read: ElementRef}) sections!: QueryList<ElementRef>;
 
-  constructor(private sideNav: SideNavService) { 
-    console.log("Remove Constructor from AppComponent\nRemove comentet part from index.html\nAlso remove the inline style height from the body in index.html");
+  constructor(private sideNav: SideNavService) {
   }
 
   @HostListener('window:scroll', ['$event'])
