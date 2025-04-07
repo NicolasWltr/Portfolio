@@ -30,7 +30,6 @@ export class HeaderComponent {
     
     if (scrollY > (document.body.offsetHeight - window.innerHeight)) {
       scrollY = window.innerHeight;
-      console.log("no");
     }
 
     if (scrollY > this.prevScroll) {

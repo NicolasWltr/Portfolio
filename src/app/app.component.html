@@ -1,15 +1,13 @@
-<div class="max-w-[130rem] mx-auto relative">
+<div class="relative">
   
   <app-welcome></app-welcome>
-  <app-construction #section id="construction" class="overflow-hidden"></app-construction>
-  <app-experience #section id="experience"></app-experience>
-  
+  <app-about-me></app-about-me>
+  <app-experience id="experience"></app-experience>
 
   <div>
-    <app-header class="fixed top-1 md:top-5 z-100 w-full max-w-[130rem]"></app-header>
-    <app-side-navigation class="hidden lg:block noHoverHidden"></app-side-navigation>
+    <app-header class="fixed top-2 z-100 w-full"></app-header>
   </div>
 </div>
 <div *ngIf="dev()" class="fixed bottom-0 bg-white p-5 z-100">
-  <p class="sm:before:content-['sm'] md:before:content-['md'] lg:before:content-['lg'] xl:before:content-['xl'] 2xl:before:content-['2xl'] before:content-['smaller']"></p>
+  <p class="sm:before:content-['sm'] md:before:content-['md'] lg:before:content-['lg'] xl:before:content-['xl'] before:content-['smaller']"></p>
 </div>

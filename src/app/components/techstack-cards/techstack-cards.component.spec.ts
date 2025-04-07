@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SideNavigationComponent } from './side-navigation.component';
+import { TechstackCardsComponent } from './techstack-cards.component';
 
-describe('SideNavigationComponent', () => {
-  let component: SideNavigationComponent;
-  let fixture: ComponentFixture<SideNavigationComponent>;
+describe('TechstackCardsComponent', () => {
+  let component: TechstackCardsComponent;
+  let fixture: ComponentFixture<TechstackCardsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SideNavigationComponent]
+      imports: [TechstackCardsComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SideNavigationComponent);
+    fixture = TestBed.createComponent(TechstackCardsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

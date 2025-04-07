@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, signal } from '@angular/core';
+import { Component, signal, WritableSignal } from '@angular/core';
 import { ThemeService } from '../../../injects/theme/theme.service';
 
 @Component({
@@ -12,12 +12,16 @@ import { ThemeService } from '../../../injects/theme/theme.service';
   styleUrl: './color-scheme.component.scss'
 })
 export class ColorSchemeComponent {
-  seeColorScheme = signal(false);
+  prefersDarkMode: WritableSignal<boolean>;
 
-  constructor(private themeService: ThemeService) {  }
+
+  constructor(private themeService: ThemeService) {  
+    this.prefersDarkMode = this.themeService.prefersDarkMode;
+  }
 
   toggle() {
-    this.seeColorScheme.set(!this.seeColorScheme());
+    // this.seeColorScheme.set(!this.seeColorScheme());
+    this.themeService.toggleDarkMode();
   }
 
   setAutoDarkMode() {

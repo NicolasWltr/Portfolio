@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="var(--background-alt)" fill-opacity="1" d="M0,128L17.1,117.3C34.3,107,69,85,103,96C137.1,107,171,149,206,154.7C240,160,274,128,309,112C342.9,96,377,96,411,117.3C445.7,139,480,181,514,213.3C548.6,245,583,267,617,272C651.4,277,686,267,720,250.7C754.3,235,789,213,823,208C857.1,203,891,213,926,181.3C960,149,994,75,1029,85.3C1062.9,96,1097,192,1131,240C1165.7,288,1200,288,1234,266.7C1268.6,245,1303,203,1337,165.3C1371.4,128,1406,96,1423,80L1440,64L1440,320L1422.9,320C1405.7,320,1371,320,1337,320C1302.9,320,1269,320,1234,320C1200,320,1166,320,1131,320C1097.1,320,1063,320,1029,320C994.3,320,960,320,926,320C891.4,320,857,320,823,320C788.6,320,754,320,720,320C685.7,320,651,320,617,320C582.9,320,549,320,514,320C480,320,446,320,411,320C377.1,320,343,320,309,320C274.3,320,240,320,206,320C171.4,320,137,320,103,320C68.6,320,34,320,17,320L0,320Z"></path>
+</svg>
+<div id="about" class="px-5 md:px-10 lg:px-15 bg-(--background-alt) scroll-mt-10 md:scroll-mt-15 lg:scroll-mt-20 xl:scroll-mt-25">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 text-(--primary) max-w-7xl mx-auto">
+        <h1 class="text-(--primary) font-bold underline-offset-5 underline text-2xl md:text-4xl lg:text-4xl xl:text-5xl lg:row-1 lg:col-1">About Me</h1>
+        <div class="md:text-lg lg:text-xl xl:text-2xl [&>p]:[&>span]:text-(--highlight) [&>*]:mb-5 w-full">
+            <p>
+                I am a <span>passionate</span> computer science student with a love for turning ideas into reality through <span>apps</span> and <span>websites</span>.
+            </p>
+            <p>
+                Whether it's crafting seamless user experiences on the <span>front end</span> or building robust and scalable solutions on the <span>back end</span>.
+            </p>
+            <p>    
+                If it's about <span>solving problems</span> and <span>building cool</span> stuff, I'm ready to jump in and get started! Let's <span>create something great together</span>!
+            </p>
+        </div>
+
+        <h1 class="text-(--primary) font-bold underline-offset-5 underline text-2xl md:text-4xl lg:text-4xl xl:text-5xl lg:row-1 lg-col-2">Techstack</h1>
+        <div class="w-full lg:col-2">
+            <ul class="grid grid-cols-1 gap-5">
+            <li *ngFor="let item of techStack">
+                    <app-techstack-cards [title]="item.title" [contents]="item.contents"></app-techstack-cards>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -34,8 +34,8 @@ export class ThemeService {
   }
 
   toggleDarkMode() {
-    this.prefersDarkMode.set(!this.prefersDarkMode);
-    this.darkModeChangedManually = true;
+    this.prefersDarkMode.set(!this.prefersDarkMode());
+    // this.darkModeChangedManually = true;
     this.updateTheme();
   }
 
