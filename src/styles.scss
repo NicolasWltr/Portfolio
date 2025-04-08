@@ -4,13 +4,16 @@ $dark-primary: #fffcf2;
 $dark-secondary: #CCC5B9;
 $dark-accent: #33333e;
 $dark-backround: #161620;
-$dark-background-alt: #121234;
-$dark-highlight: hsl(74, 100%, 50%);
+$dark-background-alt: #14142a;
+$dark-highlight: #c3ff00;
+$dark-highlight: #03BFA6;
+
 
 $light-primary: #0f0c00;
 $light-secondary: #474033;
 $light-accent: #c5c2be;
 $light-backround: #dddcda;
+$light-backround-alt: #aeaeae;
 $light-highlight: #9000ff;
 
 .dark {
@@ -27,6 +30,7 @@ $light-highlight: #9000ff;
     --secondary: #{$light-secondary};
     --accent: #{$light-accent};
     --background: #{$light-backround};
+    --background-alt: #{$light-backround-alt};
     --highlight: #{$light-highlight};
 }
 
@@ -40,5 +44,13 @@ body {
     }
     .hovereffectinverse:hover {
         background: hsl(from var(--highlight) h 25 l);
+    }
+}
+
+@media only screen and (min-width: 48rem) {
+    .text-vertical {
+        text-align: center;
+        writing-mode: vertical-lr;
+        text-orientation: sideways-right;
     }
 }

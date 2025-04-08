@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from '../../components/header/header.component';
 import { ScrollIndComponent } from '../../components/scroll-ind/scroll-ind.component';
 
 @Component({
