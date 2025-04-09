@@ -135,7 +135,8 @@
         <h1 Text>I created this clone of Bejeweled at university together with 2 other fellow students</h1>
             
             <div Image class="">
-                <img Image class="w-full h-auto rounded-4xl object-fit-contain border-5 border-white" src="bejeweled.png" alt="Gravity Roller">
+                <img *ngIf="dark()" Image class="w-full h-auto rounded-4xl object-fit-contain border-5 border-(--primary)" src="gr.png" alt="Gravity Roller">
+                <img *ngIf="!dark()" Image class="w-full h-auto rounded-4xl object-fit-contain border-5 border-(--primary)" src="gr_light.png" alt="Gravity Roller">
             </div>
             
             <div TS class="w-full flex flex-row justify-start gap-5 flex-wrap">
