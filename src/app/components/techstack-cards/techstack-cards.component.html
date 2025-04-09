@@ -4,16 +4,7 @@
     </div>
     <div class="flex flex-row gap-3 flex-wrap p-3 justify-center">
         <div *ngFor="let item of contents">
-            <div class="h-20 w-20 relative overflow-hidden
-            [&>*]:transition-all
-            hover:[&>.svg]:opacity-0 hover:[&>.svg]:rotate-y-180
-            hover:[&>.name]:opacity-100 hover:[&>.name]:rotate-y-0">
-
-            <div class="size-full svg absolute" [innerHTML]="item.svg"></div>
-            
-            <div class="name absolute size-full [&>*]:text-center flex justify-center items-center opacity-0 rotate-y-180 overflow-hidden text-(--highlight)">
-                <h1>{{ item.name }}</h1>
-            </div>
+            <app-svgs [name]="item"></app-svgs>
         </div>
     </div>
 </div>
