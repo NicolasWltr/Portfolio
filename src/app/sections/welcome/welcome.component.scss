@@ -1,6 +1,6 @@
 .animate-typing-top {
     animation: typing-top 1s forwards, blink 0.5s step-end infinite;
-    animation-delay: 1s;
+    animation-delay: 0s;
 }
 
 @keyframes typing-top {
@@ -35,7 +35,7 @@
 
 .animate-typing-bottom {
     animation: typing-bottom 1s steps(16) forwards, blink 0.5s step-end infinite;
-    animation-delay: 2s;
+    animation-delay: 1s;
 }
 
 @keyframes typing-bottom {
@@ -50,7 +50,7 @@
 
 .animate-flyin {
     animation: fly-in 1s forwards;
-    animation-delay: 3.5s;
+    animation-delay: 2s;
     opacity: 0;
 }
 

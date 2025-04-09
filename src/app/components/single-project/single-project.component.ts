@@ -14,7 +14,10 @@ export class SingleProjectComponent {
   @Input() reverse: boolean = false;
 
   @Input() code: string = "";
-  @Input() live: string = "";
 
+  @Input() live: string = "";
   @Input() liveExists: boolean = true;
+
+  @Input() download: string = "";
+  @Input() downloadExists: boolean = false;
 }
