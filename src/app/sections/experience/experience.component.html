@@ -10,7 +10,7 @@
                 </div>
             </div>
         </div>
-        <div class="h-full flex flex-col lg:grid lg:grid-cols-2 place-items-start bg-(--accent) rounded-xl shadow-md shadow-(color:--highlight) ring-(--highlight)
+        <div class="h-full flex flex-col lg:grid lg:grid-cols-2 place-items-start bg-(--accent) rounded-2xl
         [&>*]:p-5 sm:[&>*]:p-10">
             <div class="flex flex-col justify-center items-start w-full">
                 <h1 class="text-3xl md:text-4xl xl:text-5xl font-bold underline decoration-(--highlight) decoration-3 underline-offset-5 md:underline-offset-8 xl:underline-offset-10 pb-5">Education</h1>
@@ -22,10 +22,12 @@
                     </div>
                     <div class="pl-5 md:pl-10 pt-5 text-sm sm:text-md md:text-xl md:pt-4">
                         <h1 class="font-bold">{{ edu.degree }}<span class="hidden sm:inline lg:hidden xl:inline"> – </span><br class="sm:hidden lg:inline xl:hidden"/>{{ edu.name }}</h1>
-                        <p class="pl-5">{{ edu.start }} – {{ edu.end }}</p>
-                        <ol  class="pl-10 pt-3 list-disc">
-                            <li *ngFor="let info of edu.infos">{{ info }}</li>
-                        </ol>
+                        <div class="text-(--secondary)">
+                            <p class="pl-5">{{ edu.start }} – {{ edu.end }}</p>
+                            <ol  class="pl-10 pt-3 list-disc">
+                                <li *ngFor="let info of edu.infos">{{ info }}</li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -40,12 +42,15 @@
                     <div class="pl-5 md:pl-10 pt-5 text-sm sm:text-md md:text-xl md:pt-4 ">
                         <h1 class="font-bold">{{ work.name }}<span class="hidden sm:inline lg:hidden xl:inline"> – </span><br class="sm:hidden lg:inline xl:hidden"/>{{ work.company }}</h1>
 
-                        <ng-container *ngIf="work.end !== null; then thenBlock; else elseBlock"></ng-container>
-                        <ng-template #thenBlock><p class="pl-5">{{ work.start }} – {{ work.end }}</p></ng-template>
-                        <ng-template #elseBlock><p class="pl-5">{{ work.start }}</p></ng-template>
-                        <ol  class="pl-10 pt-3 list-disc">
-                            <li *ngFor="let task of work.tasks">{{ task }}</li>
-                        </ol>
+                        <div class="text-(--secondary)">
+                            <ng-container *ngIf="work.end !== null; then thenBlock; else elseBlock"></ng-container>
+                            <ng-template #thenBlock><p class="pl-5">{{ work.start }} – {{ work.end }}</p></ng-template>
+                            <ng-template #elseBlock><p class="pl-5">{{ work.start }}</p></ng-template>
+                            <ol  class="pl-10 pt-3 list-disc">
+                                <li *ngFor="let task of work.tasks">{{ task }}</li>
+                            </ol>
+                        </div>
+
                     </div>
                 </div>
             </div>
