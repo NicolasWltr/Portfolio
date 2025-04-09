@@ -12,4 +12,9 @@ import { Component, Input } from '@angular/core';
 export class SingleProjectComponent {
   @Input() name: string = 'Project';
   @Input() reverse: boolean = false;
+
+  @Input() code: string = "";
+  @Input() live: string = "";
+
+  @Input() liveExists: boolean = true;
 }
