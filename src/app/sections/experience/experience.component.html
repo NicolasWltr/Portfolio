@@ -1,45 +1,57 @@
-<!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-    <path fill="var(--background-alt)" stroke="var(--background-alt)" stroke-width="1" fill-opacity="1" d="M0,160L17.1,144C34.3,128,69,96,103,85.3C137.1,75,171,85,206,128C240,171,274,245,309,256C342.9,267,377,213,411,197.3C445.7,181,480,203,514,186.7C548.6,171,583,117,617,112C651.4,107,686,149,720,181.3C754.3,213,789,235,823,234.7C857.1,235,891,213,926,218.7C960,224,994,256,1029,229.3C1062.9,203,1097,117,1131,101.3C1165.7,85,1200,139,1234,149.3C1268.6,160,1303,128,1337,133.3C1371.4,139,1406,181,1423,202.7L1440,224L1440,0L1422.9,0C1405.7,0,1371,0,1337,0C1302.9,0,1269,0,1234,0C1200,0,1166,0,1131,0C1097.1,0,1063,0,1029,0C994.3,0,960,0,926,0C891.4,0,857,0,823,0C788.6,0,754,0,720,0C685.7,0,651,0,617,0C582.9,0,549,0,514,0C480,0,446,0,411,0C377.1,0,343,0,309,0C274.3,0,240,0,206,0C171.4,0,137,0,103,0C68.6,0,34,0,17,0L0,0Z"></path>
-</svg> -->
-<div class="w-full py-10 overflow-hidden text-(--primary) max-w-7xl mx-auto">
-    <div class="h-full flex flex-col lg:grid lg:grid-cols-2 place-items-start bg-(--accent) rounded-xl shadow-md shadow-(color:--highlight) ring-(--highlight)
-    [&>*]:p-5 sm:[&>*]:p-10">
-        <div class="flex flex-col justify-center items-start w-full">
-            <h1 class="text-3xl md:text-4xl xl:text-5xl font-bold underline decoration-(--highlight) decoration-3 underline-offset-5 md:underline-offset-8 xl:underline-offset-10 pb-5">Education</h1>
-            
-            <div *ngFor="let edu of education"
-            class="border-l-5 relative  border-(--secondary) pb-5">
-                <div class="absolute top-5 left-0 transform-[translate(-65%,0%)] md:transform-[translate(-60%,0%)]">
-                    <div class="h-4 md:h-5 aspect-square bg-(--highlight) rotate-45 border-3 border-(--secondary)"></div>
-                </div>
-                <div class="pl-5 md:pl-10 pt-5 text-sm sm:text-md md:text-xl md:pt-4">
-                    <h1 class="font-bold">{{ edu.degree }}<span class="hidden sm:inline lg:hidden xl:inline"> – </span><br class="sm:hidden lg:inline xl:hidden"/>{{ edu.name }}</h1>
-                    <p class="pl-5">{{ edu.start }} – {{ edu.end }}</p>
-                    <ol  class="pl-10 pt-3 list-disc">
-                        <li *ngFor="let info of edu.infos">{{ info }}</li>
-                    </ol>
+<svg style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 250" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <path style="transform:translate(0, 0px); opacity:1" fill="var(--background-alt)" d="M0,25L10,41.7C20,58,40,92,60,125C80,158,100,192,120,187.5C140,183,160,142,180,137.5C200,133,220,167,240,187.5C260,208,280,217,300,187.5C320,158,340,92,360,70.8C380,50,400,75,420,100C440,125,460,150,480,145.8C500,142,520,108,540,83.3C560,58,580,42,600,58.3C620,75,640,125,660,145.8C680,167,700,158,720,158.3C740,158,760,167,780,150C800,133,820,92,840,100C860,108,880,167,900,170.8C920,175,940,125,960,95.8C980,67,1000,58,1020,45.8C1040,33,1060,17,1080,12.5C1100,8,1120,17,1140,33.3C1160,50,1180,75,1200,75C1220,75,1240,50,1260,66.7C1280,83,1300,142,1320,154.2C1340,167,1360,133,1380,108.3C1400,83,1420,67,1430,58.3L1440,50L1440,250L1430,250C1420,250,1400,250,1380,250C1360,250,1340,250,1320,250C1300,250,1280,250,1260,250C1240,250,1220,250,1200,250C1180,250,1160,250,1140,250C1120,250,1100,250,1080,250C1060,250,1040,250,1020,250C1000,250,980,250,960,250C940,250,920,250,900,250C880,250,860,250,840,250C820,250,800,250,780,250C760,250,740,250,720,250C700,250,680,250,660,250C640,250,620,250,600,250C580,250,560,250,540,250C520,250,500,250,480,250C460,250,440,250,420,250C400,250,380,250,360,250C340,250,320,250,300,250C280,250,260,250,240,250C220,250,200,250,180,250C160,250,140,250,120,250C100,250,80,250,60,250C40,250,20,250,10,250L0,250Z"></path>
+</svg>
+<div class="px-5 md:px-10 lg:px-15 bg-(--background-alt)">
+    <div class="w-full overflow-hidden text-(--primary) max-w-7xl mx-auto">
+        <div class="px-5 md:px-10 lg:px-15 mb-20">
+            <div class="max-w-7xl mx-auto w-full">
+                <div class="size-full">
+                    <h1 class="text-(--primary) text-center font-bold underline-offset-5 underline text-2xl md:text-4xl lg:text-4xl xl:text-5xl">Qualifications</h1>
                 </div>
             </div>
         </div>
-        <div class="flex flex-col justify-center items-start w-full">
-            <h1 class="text-2xl md:text-4xl xl:text-5xl font-bold underline decoration-(--highlight) decoration-3 underline-offset-5 md:underline-offset-8 xl:underline-offset-10 pb-5">Work Experience</h1>
-            
-            <div *ngFor="let work of workExperience"
-            class="border-l-5 relative  border-(--secondary) pb-5">
-                <div class="absolute top-5 left-0 transform-[translate(-65%,0%)] md:transform-[translate(-60%,0%)]">
-                    <div class="h-4 md:h-5 aspect-square bg-(--highlight) rotate-45 border-3 border-(--secondary)"></div>
+        <div class="h-full flex flex-col lg:grid lg:grid-cols-2 place-items-start bg-(--accent) rounded-xl shadow-md shadow-(color:--highlight) ring-(--highlight)
+        [&>*]:p-5 sm:[&>*]:p-10">
+            <div class="flex flex-col justify-center items-start w-full">
+                <h1 class="text-3xl md:text-4xl xl:text-5xl font-bold underline decoration-(--highlight) decoration-3 underline-offset-5 md:underline-offset-8 xl:underline-offset-10 pb-5">Education</h1>
+                
+                <div *ngFor="let edu of education"
+                class="border-l-5 relative  border-(--secondary) pb-5">
+                    <div class="absolute top-5 left-0 transform-[translate(-65%,0%)] md:transform-[translate(-60%,0%)]">
+                        <div class="h-4 md:h-5 aspect-square bg-(--highlight) rotate-45 border-3 border-(--secondary)"></div>
+                    </div>
+                    <div class="pl-5 md:pl-10 pt-5 text-sm sm:text-md md:text-xl md:pt-4">
+                        <h1 class="font-bold">{{ edu.degree }}<span class="hidden sm:inline lg:hidden xl:inline"> – </span><br class="sm:hidden lg:inline xl:hidden"/>{{ edu.name }}</h1>
+                        <p class="pl-5">{{ edu.start }} – {{ edu.end }}</p>
+                        <ol  class="pl-10 pt-3 list-disc">
+                            <li *ngFor="let info of edu.infos">{{ info }}</li>
+                        </ol>
+                    </div>
                 </div>
-                <div class="pl-5 md:pl-10 pt-5 text-sm sm:text-md md:text-xl md:pt-4 ">
-                    <h1 class="font-bold">{{ work.name }}<span class="hidden sm:inline lg:hidden xl:inline"> – </span><br class="sm:hidden lg:inline xl:hidden"/>{{ work.company }}</h1>
+            </div>
+            <div class="flex flex-col justify-center items-start w-full">
+                <h1 class="text-2xl md:text-4xl xl:text-5xl font-bold underline decoration-(--highlight) decoration-3 underline-offset-5 md:underline-offset-8 xl:underline-offset-10 pb-5">Work Experience</h1>
+                
+                <div *ngFor="let work of workExperience"
+                class="border-l-5 relative  border-(--secondary) pb-5">
+                    <div class="absolute top-5 left-0 transform-[translate(-65%,0%)] md:transform-[translate(-60%,0%)]">
+                        <div class="h-4 md:h-5 aspect-square bg-(--highlight) rotate-45 border-3 border-(--secondary)"></div>
+                    </div>
+                    <div class="pl-5 md:pl-10 pt-5 text-sm sm:text-md md:text-xl md:pt-4 ">
+                        <h1 class="font-bold">{{ work.name }}<span class="hidden sm:inline lg:hidden xl:inline"> – </span><br class="sm:hidden lg:inline xl:hidden"/>{{ work.company }}</h1>
 
-                    <ng-container *ngIf="work.end !== null; then thenBlock; else elseBlock"></ng-container>
-                    <ng-template #thenBlock><p class="pl-5">{{ work.start }} – {{ work.end }}</p></ng-template>
-                    <ng-template #elseBlock><p class="pl-5">{{ work.start }}</p></ng-template>
-                    <ol  class="pl-10 pt-3 list-disc">
-                        <li *ngFor="let task of work.tasks">{{ task }}</li>
-                    </ol>
+                        <ng-container *ngIf="work.end !== null; then thenBlock; else elseBlock"></ng-container>
+                        <ng-template #thenBlock><p class="pl-5">{{ work.start }} – {{ work.end }}</p></ng-template>
+                        <ng-template #elseBlock><p class="pl-5">{{ work.start }}</p></ng-template>
+                        <ol  class="pl-10 pt-3 list-disc">
+                            <li *ngFor="let task of work.tasks">{{ task }}</li>
+                        </ol>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<svg style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 250" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <path style="transform:translate(0, 0px); opacity:1" fill="var(--background-alt)" d="M0,50L10,50C20,50,40,50,60,79.2C80,108,100,167,120,162.5C140,158,160,92,180,91.7C200,92,220,158,240,162.5C260,167,280,108,300,95.8C320,83,340,117,360,116.7C380,117,400,83,420,66.7C440,50,460,50,480,45.8C500,42,520,33,540,58.3C560,83,580,142,600,175C620,208,640,217,660,187.5C680,158,700,92,720,62.5C740,33,760,42,780,45.8C800,50,820,50,840,79.2C860,108,880,167,900,191.7C920,217,940,208,960,175C980,142,1000,83,1020,62.5C1040,42,1060,58,1080,83.3C1100,108,1120,142,1140,133.3C1160,125,1180,75,1200,70.8C1220,67,1240,108,1260,112.5C1280,117,1300,83,1320,79.2C1340,75,1360,100,1380,112.5C1400,125,1420,125,1430,125L1440,125L1440,250L1430,250C1420,250,1400,250,1380,250C1360,250,1340,250,1320,250C1300,250,1280,250,1260,250C1240,250,1220,250,1200,250C1180,250,1160,250,1140,250C1120,250,1100,250,1080,250C1060,250,1040,250,1020,250C1000,250,980,250,960,250C940,250,920,250,900,250C880,250,860,250,840,250C820,250,800,250,780,250C760,250,740,250,720,250C700,250,680,250,660,250C640,250,620,250,600,250C580,250,560,250,540,250C520,250,500,250,480,250C460,250,440,250,420,250C400,250,380,250,360,250C340,250,320,250,300,250C280,250,260,250,240,250C220,250,200,250,180,250C160,250,140,250,120,250C100,250,80,250,60,250C40,250,20,250,10,250L0,250Z"></path>
+</svg>
