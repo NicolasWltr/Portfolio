@@ -1,7 +1,7 @@
 import { Component, ElementRef, HostListener, signal, ViewChild } from '@angular/core';
 import { ThemeService } from '../../injects/theme/theme.service';
-import { ColorSchemeComponent } from './color-scheme/color-scheme.component';
 import { CommonModule } from '@angular/common';
+import { ColorSchemeComponent } from '../../components/color-scheme/color-scheme.component';
 
 @Component({
   selector: 'app-header',
