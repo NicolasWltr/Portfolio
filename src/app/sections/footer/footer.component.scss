@@ -1,0 +1,19 @@
+.inputfield:has(input:focus)>div,
+.inputfield:not(:has(input:placeholder-shown))>div,
+.areafield:has(textarea:focus)>div,
+.areafield:not(:has(textarea:placeholder-shown))>div {
+    h1 {
+        width: min-content;
+        height: min-content;
+
+        padding: 0;
+        padding-inline: 5px;
+
+        background: var(--background);
+        white-space: nowrap;
+        span {
+            display: none;
+        }
+        transform: translate(30px, -20px);
+    }
+}

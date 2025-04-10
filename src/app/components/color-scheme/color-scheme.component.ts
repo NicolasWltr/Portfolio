@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, signal, WritableSignal } from '@angular/core';
+import { Component, WritableSignal } from '@angular/core';
 import { ThemeService } from '../../injects/theme/theme.service';
 
 

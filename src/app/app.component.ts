@@ -5,6 +5,7 @@ import { ExperienceComponent } from './sections/experience/experience.component'
 import { CommonModule } from '@angular/common';
 import { AboutMeComponent } from "./sections/about-me/about-me.component";
 import { ProjectsComponent } from "./sections/projects/projects.component";
+import { FooterComponent } from "./sections/footer/footer.component";
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,8 @@ import { ProjectsComponent } from "./sections/projects/projects.component";
     HeaderComponent,
     ExperienceComponent,
     AboutMeComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    FooterComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

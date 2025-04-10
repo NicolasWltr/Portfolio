@@ -1,0 +1,75 @@
+<div class="px-5 md:px-10 lg:px-15">
+    <div class="max-w-7xl mx-auto w-full flex flex-col gap-20 justify-around items-center text-(--primary) pb-5
+    md:text-lg lg:text-xl xl:text-2xl">
+        <div class="grid grid-cols-1 md:grid-cols-2 w-full gap-20 md:gap-5">
+            <div class="flex flex-col gap-5">
+                <h1 class="text-4xl xl:text-5xl mb-5">Connect with me</h1>
+
+                <a href="https://www.github.com/NicolasWltr" target="_blank" rel="noopener noreferrer" class="h-10 w-min">
+                    <div class="flex flex-row size-full items-center gap-5">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" version="1.1" data-view-component="true" class="h-full aspect-square">
+                            <path fill=var(--primary) d="M12 1C5.9225 1 1 5.9225 1 12C1 16.8675 4.14875 20.9787 8.52125 22.4362C9.07125 22.5325 9.2775 22.2025 9.2775 21.9137C9.2775 21.6525 9.26375 20.7862 9.26375 19.865C6.5 20.3737 5.785 19.1912 5.565 18.5725C5.44125 18.2562 4.905 17.28 4.4375 17.0187C4.0525 16.8125 3.5025 16.3037 4.42375 16.29C5.29 16.2762 5.90875 17.0875 6.115 17.4175C7.105 19.0812 8.68625 18.6137 9.31875 18.325C9.415 17.61 9.70375 17.1287 10.02 16.8537C7.5725 16.5787 5.015 15.63 5.015 11.4225C5.015 10.2262 5.44125 9.23625 6.1425 8.46625C6.0325 8.19125 5.6475 7.06375 6.2525 5.55125C6.2525 5.55125 7.17375 5.2625 9.2775 6.67875C10.1575 6.43125 11.0925 6.3075 12.0275 6.3075C12.9625 6.3075 13.8975 6.43125 14.7775 6.67875C16.8813 5.24875 17.8025 5.55125 17.8025 5.55125C18.4075 7.06375 18.0225 8.19125 17.9125 8.46625C18.6138 9.23625 19.04 10.2125 19.04 11.4225C19.04 15.6437 16.4688 16.5787 14.0213 16.8537C14.42 17.1975 14.7638 17.8575 14.7638 18.8887C14.7638 20.36 14.75 21.5425 14.75 21.9137C14.75 22.2025 14.9563 22.5462 15.5063 22.4362C19.8513 20.9787 23 16.8537 23 12C23 5.9225 18.0775 1 12 1Z"></path>
+                        </svg>
+                        <p>GitHub</p>
+                    </div>
+                </a>
+                <a href="https://www.linkedin.com/in/nicolas-walter-1b102a227/" target="_blank" rel="noopener noreferrer" class="h-10 w-min">
+                    <div class="flex flex-row size-full items-center gap-5">
+                        <svg focusable="false" viewBox="0 0 24 24" aria-hidden="true" class="h-full aspect-square">
+                            <path fill="var(--primary)" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"></path>
+                        </svg>
+                        <p>LinkedIn</p>
+                    </div>
+                </a>
+            </div>
+            <div class="flex flex-col gap-5">
+                <h1 class="text-4xl xl:text-5xl mb-5">Get in touch</h1>
+
+                <form [formGroup]="contactForm" (ngSubmit)="sendMail()" class="flex flex-col gap-5">
+                    <div class="relative size-full inputfield">
+                        <input type="text" placeholder=" " class="w-full bg-(--background) border-2 border-(--primary) rounded-3xl p-3 text-(--primary)" formControlName="name"
+                        [ngClass]="{
+                            'border-red-900' : contactForm.get('name')?.invalid && (contactForm.get('name')?.touched || contactForm.get('name')?.dirty),
+                            'border-(--primary)' : contactForm.get('name')?.valid && (contactForm.get('name')?.touched || contactForm.get('name')?.dirty)
+                        }">
+                        <div class="size-full p-1 absolute top-0 left-0 pointer-events-none">
+                            <h1 class="size-full p-3 text-(--secondary) bg-(--background) rounded-4xl transition-transform">Your Name<span>*</span></h1>
+                        </div>
+                    </div>
+                    <div class="relative size-full inputfield">
+                        <input type="email" placeholder="To get back to you" class="w-full bg-(--background) border-2 border-(--primary) rounded-3xl p-3 text-(--primary)" formControlName="email" required
+                        [ngClass]="{
+                            'border-red-900' : contactForm.get('email')?.invalid && (contactForm.get('email')?.touched || contactForm.get('email')?.dirty),
+                            'border-(--primary)' : contactForm.get('email')?.valid && (contactForm.get('email')?.touched || contactForm.get('email')?.dirty)
+                        }">
+                        <div class="size-full p-1 absolute top-0 left-0 pointer-events-none">
+                            <h1 class="size-full p-3 text-(--secondary) bg-(--background) rounded-4xl transition-transform">E-Mail<span>*</span></h1>
+                        </div>
+                    </div>
+                    <div class="relative size-full areafield">
+                        <textarea type="text" placeholder=" " class="min-h-40 h-auto w-full bg-(--background) border-2 border-(--primary) rounded-3xl p-3 text-(--primary) text-wrap" formControlName="message" required
+                        [ngClass]="{
+                            'border-red-900' : contactForm.get('message')?.invalid && (contactForm.get('message')?.touched || contactForm.get('message')?.dirty),
+                            'border-(--primary)' : contactForm.get('message')?.valid && (contactForm.get('message')?.touched || contactForm.get('message')?.dirty)
+                        }"></textarea>
+                        <div class="w-full h-10 p-1 absolute top-0 left-0 pointer-events-none">
+                            <h1 class="size-full p-3 text-(--secondary) bg-(--background) rounded-4xl transition-transform">Message<span>*</span></h1>
+                        </div>
+                    </div>
+                    <button type="submit" [disabled]="contactForm.invalid" class="flex flex-row h-13 w-min justify-around items-center border-4 rounded-4xl border-(--highlight) bg-(--highlight) p-2 cursor-pointer hover:opacity-100 transition-colors ease-[cubic-bezier(.47,1.64,.41,.8)] duration-500"
+                    [ngClass]="{ 
+                        'hovereffectinverse' : contactForm.valid,
+                        'border-red-900 !bg-(--accent)' : contactForm.invalid,
+                    }"> 
+                        <div class="h-full w-min flex flex-row justify-left items-center gap-5">
+                            <h1 class="text-(--background)">Send</h1>
+                            <svg class="h-full aspect-square" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.7639 12H10.0556M3 8.00003H5.5M4 12H5.5M4.5 16H5.5M9.96153 12.4896L9.07002 15.4486C8.73252 16.5688 8.56376 17.1289 8.70734 17.4633C8.83199 17.7537 9.08656 17.9681 9.39391 18.0415C9.74792 18.1261 10.2711 17.8645 11.3175 17.3413L19.1378 13.4311C20.059 12.9705 20.5197 12.7402 20.6675 12.4285C20.7961 12.1573 20.7961 11.8427 20.6675 11.5715C20.5197 11.2598 20.059 11.0295 19.1378 10.5689L11.3068 6.65342C10.2633 6.13168 9.74156 5.87081 9.38789 5.95502C9.0808 6.02815 8.82627 6.24198 8.70128 6.53184C8.55731 6.86569 8.72427 7.42461 9.05819 8.54246L9.96261 11.5701C10.0137 11.7411 10.0392 11.8266 10.0493 11.9137C10.0583 11.991 10.0582 12.069 10.049 12.1463C10.0387 12.2334 10.013 12.3188 9.96153 12.4896Z" stroke="var(--background)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                        </div>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <h1>{{ "@" + year }} Made with ❤️ by Nicolas Walter</h1>
+    </div>
+</div>
