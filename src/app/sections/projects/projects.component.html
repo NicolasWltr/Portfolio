@@ -1,14 +1,14 @@
 <div id="projects" class="scroll-mt-10 md:scroll-mt-15 lg:scroll-mt-20 xl:scroll-mt-25">
-    <div class="text-(--primary) flex flex-col">
+    <div class="text-(--text) flex flex-col">
         <div class="px-5 md:px-10 lg:px-15 mb-10 lg:mb-20">
             <div class="max-w-7xl mx-auto w-full">
                 <div class="size-full">
-                    <h1 class="text-(--primary) text-center font-bold underline-offset-5 underline text-4xl xl:text-5xl">Projects</h1>
+                    <h1 class="text-(--text) text-center font-bold underline-offset-5 underline text-4xl xl:text-5xl">Projects</h1>
                 </div>
             </div>
         </div>
         <app-single-project name="Tic-Tac-Toe Variation" code="https://www.github.com/NicolasWltr/TicTacToe" live="https://games.walternicolas.de/tictactoe" [reverse]="false">
-            <div Text class="md:text-lg lg:text-xl xl:text-2xl [&>p]:[&>span]:text-(--highlight) flex-col flex gap-5">
+            <div Text class="md:text-lg lg:text-xl xl:text-2xl [&>p]:[&>span]:text-(--primary) flex-col flex gap-5">
                 <p>A Variation of the classic game Tic-Tac-Toe, with <span>more complex</span> game modes, that allows you to <span>play with anyone around the world</span> or with 2 players on one device.</p> 
                 
                 <p>Simply click <span><a class="underline" href="https://games.walternicolas.de/tictactoe" target="_blank" rel="noopener noreferrer">here</a></span> or the <span>LIVE PROJECT</span> button below to open the game in the browser and you're ready to play the most complicated forms of TicTacToe.</p>
@@ -39,7 +39,7 @@
         </svg>
 
         <app-single-project name="Bejeweled Clone" code="https://github.com/NicolasWltr/BejweledClone" download="https://github.com/NicolasWltr/BejweledClone/releases/tag/Download" [reverse]="true" [liveExists]="false" [downloadExists]="true">
-            <div Text class="md:text-lg lg:text-xl xl:text-2xl [&>p]:[&>span]:text-(--highlight) flex-col flex gap-5">
+            <div Text class="md:text-lg lg:text-xl xl:text-2xl [&>p]:[&>span]:text-(--primary) flex-col flex gap-5">
                 <p>I created this clone of Bejeweled at university together with 2 other fellow students</p>
 
                 <p>We added some <span>twists</span> to the form of the field, as well as the optional feature to generate the field with holes to make the game harder</p>
@@ -53,7 +53,7 @@
 
             </div>
             
-            <div Image class="grid grid-cols-2 border-5 rounded-4xl border-(--primary) overflow-hidden">
+            <div Image class="grid grid-cols-2 border-5 rounded-4xl border-(--text) overflow-hidden">
                 <img Image class="w-full h-auto object-fit-contain border-r-2 border-b-2" src="bj1.webp" alt="Bejeweled Clone">
                 <img Image class="w-full h-auto object-fit-contain border-l-2 border-b-2" src="bj2.webp" alt="Bejeweled Clone">
                 <img Image class="w-full h-auto object-fit-contain border-r-2 border-t-2" src="bj3.webp" alt="Bejeweled Clone">
@@ -71,7 +71,7 @@
         </svg>
 
         <app-single-project name="Gravity Roller" code="https://github.com/NicolasWltr/GravityRoller" [liveExists]="false">
-            <div Text class="md:text-lg lg:text-xl xl:text-2xl [&>p]:[&>span]:text-(--highlight) flex-col flex gap-5">
+            <div Text class="md:text-lg lg:text-xl xl:text-2xl [&>p]:[&>span]:text-(--primary) flex-col flex gap-5">
                 <p>A <span>2d-platformer</span> mobile game I <span>designed</span>, <span>developed</span> and <span>deployed</span> during and after my abitur.</p>
 
                 <p>You play the little ball and you can move and jump from all <span>floors</span>, <span>walls</span> and <span>ceillings</span>. But watch out not to fall down or die from the obstacles in the course.</p>
@@ -86,8 +86,8 @@
             </div>
             
             <div Image class="">
-                <img *ngIf="dark()" Image class="w-full h-auto rounded-4xl object-fit-contain border-5 border-(--primary)" src="gr.webp" alt="Gravity Roller">
-                <img *ngIf="!dark()" Image class="w-full h-auto rounded-4xl object-fit-contain border-5 border-(--primary)" src="gr_light.webp" alt="Gravity Roller">
+                <img *ngIf="dark()" Image class="w-full h-auto rounded-4xl object-fit-contain border-5 border-(--text)" src="gr.webp" alt="Gravity Roller">
+                <img *ngIf="!dark()" Image class="w-full h-auto rounded-4xl object-fit-contain border-5 border-(--text)" src="gr_light.webp" alt="Gravity Roller">
             </div>
             
             <div TS class="w-full flex flex-row justify-start gap-5 flex-wrap">

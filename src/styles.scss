@@ -1,39 +1,36 @@
 @use "tailwindcss";
 
-$dark-primary: #fffcf2;
+$dark-text: #fffcf2;
+$dark-background: #0c0c15;
+$dark-background-alt: #111122;
+$dark-primary: #03BFA6;
 $dark-secondary: #dac7c7;
 $dark-accent: #33333e;
-// $dark-backround: #161620; //OLD BACKGROUND
-$dark-backround: #0c0c15;
-// $dark-background-alt: #14142a; //OLD BACKGROUND ALT
-$dark-background-alt: #111122;
-$dark-highlight: #c3ff00;
-$dark-highlight: #03BFA6;
 
 
-$light-primary: #0f0c00;
+$light-text: #0f0c00;
+$light-background: #dddcda;
+$light-background-alt: #aeaeae;
+$light-primary: #9000ff;
 $light-secondary: #38342d;
 $light-accent: #bec0c5;
-$light-backround: #dddcda;
-$light-backround-alt: #aeaeae;
-$light-highlight: #9000ff;
 
 .dark {
+    --text: #{$dark-text};
+    --background: #{$dark-background};
+    --background-alt: #{$dark-background-alt};
     --primary: #{$dark-primary};
     --secondary: #{$dark-secondary};
     --accent: #{$dark-accent};
-    --background: #{$dark-backround};
-    --background-alt: #{$dark-background-alt};
-    --highlight: #{$dark-highlight};
 }
 
 .light {
+    --text: #{$light-text};
+    --background: #{$light-background};
+    --background-alt: #{$light-background-alt};
     --primary: #{$light-primary};
     --secondary: #{$light-secondary};
     --accent: #{$light-accent};
-    --background: #{$light-backround};
-    --background-alt: #{$light-backround-alt};
-    --highlight: #{$light-highlight};
 }
 
 body {
@@ -42,10 +39,10 @@ body {
 
 @media (hover: hover) {
     .hovereffect:hover {
-        background: hsl(from var(--highlight) h 25 l);
+        background: hsl(from var(--primary) h 25 l);
     }
     .hovereffectinverse:hover {
-        background: hsl(from var(--highlight) h 25 l);
+        background: hsl(from var(--primary) h 25 l);
     }
 }
 

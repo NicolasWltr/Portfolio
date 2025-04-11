@@ -16,7 +16,7 @@
                 <ng-content select="[Text]"></ng-content>
 
                 <div class="flex flex-col md:flex-row gap-5">
-                    <a [href]="code" target="_blank" rel="noopener noreferrer" class="hovereffectinverse flex flex-row gap-5 h-13 w-auto justify-around items-center border-1 rounded-full border-(--highlight) bg-(--highlight) p-2 cursor-pointer hover:opacity-100 transition-colors ease-[cubic-bezier(.47,1.64,.41,.8)] duration-500">
+                    <a [href]="code" target="_blank" rel="noopener noreferrer" class="hovereffectinverse flex flex-row gap-5 h-13 w-auto justify-around items-center border-1 rounded-full border-(--primary) bg-(--primary) p-2 cursor-pointer hover:opacity-100 transition-colors ease-[cubic-bezier(.47,1.64,.41,.8)] duration-500">
                         <div class="size-full flex flex-row justify-between items-center gap-5">
                             <h1 class="text-(--background) break-inside-avoid">SOURCE CODE</h1>
                             <svg aria-hidden="true" viewBox="0 0 24 24" version="1.1" data-view-component="true" class="h-full">
@@ -24,7 +24,7 @@
                             </svg>
                         </div>
                     </a>
-                    <a *ngIf="liveExists" [href]="live" target="_blank" rel="noopener noreferrer" class="hovereffectinverse flex flex-row gap-5 h-13 w-auto justify-around items-center border-1 rounded-full border-(--highlight) bg-(--highlight) p-2 cursor-pointer hover:opacity-100 transition-colors ease-[cubic-bezier(.47,1.64,.41,.8)] duration-500">
+                    <a *ngIf="liveExists" [href]="live" target="_blank" rel="noopener noreferrer" class="hovereffectinverse flex flex-row gap-5 h-13 w-auto justify-around items-center border-1 rounded-full border-(--primary) bg-(--primary) p-2 cursor-pointer hover:opacity-100 transition-colors ease-[cubic-bezier(.47,1.64,.41,.8)] duration-500">
                         <div class="size-full flex flex-row justify-between items-center gap-5">
                             <h1 class="text-(--background) break-inside-avoid">LIVE PROJECT</h1>
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full">
@@ -34,7 +34,7 @@
                             </svg>
                         </div>
                     </a>
-                    <a *ngIf="downloadExists" [href]="download" target="_blank" rel="noopener noreferrer" class="hovereffectinverse flex flex-row gap-5 h-13 w-auto justify-around items-center border-1 rounded-full border-(--highlight) bg-(--highlight) p-2 cursor-pointer hover:opacity-100 transition-colors ease-[cubic-bezier(.47,1.64,.41,.8)] duration-500">
+                    <a *ngIf="downloadExists" [href]="download" target="_blank" rel="noopener noreferrer" class="hovereffectinverse flex flex-row gap-5 h-13 w-auto justify-around items-center border-1 rounded-full border-(--primary) bg-(--primary) p-2 cursor-pointer hover:opacity-100 transition-colors ease-[cubic-bezier(.47,1.64,.41,.8)] duration-500">
                         <div class="size-full flex flex-row justify-between items-center gap-5">
                             <h1 class="text-(--background) break-inside-avoid">DOWNLOAD PROJECT</h1>
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full">
