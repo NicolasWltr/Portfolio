@@ -11,38 +11,49 @@
             </div>
         </div>
         <div class="flex flex-col gap-5">
-            <div *ngFor="let item of qualifications">
-                <app-qualification *ngIf="item.work" [work]="item.work">
-                    <div QUAL>
-                        <h1>{{ item.name }} - {{ item.company }}</h1>
-                        <div class="text-(--secondary)">
-                            <ol class="pl-10 pt-3 list-disc">
-                                <li *ngFor="let task of item.tasks">{{ task }}</li>
-                            </ol>
+            @for (item of qualifications; track $index) {
+                @if (item.work) {
+                    <app-qualification [work]="item.work">
+                        <div QUAL>
+                            <h1>{{ item.name }} - {{ item.company }}</h1>
+                            <div class="text-(--secondary)">
+                                <ol class="pl-10 pt-3 list-disc">
+                                    @for (task of item.tasks; track $index) {
+                                        <li>{{ task }}</li>
+                                    }
+                                </ol>
+                            </div>
                         </div>
-                    </div>
-                    <div TIME>
-                        <ng-container *ngIf="item.end !== null; then thenBlock; else elseBlock"></ng-container>
-                        <ng-template #thenBlock><p>{{ item.start }} – {{ item.end }}</p></ng-template>
-                        <ng-template #elseBlock><p>{{ item.start }}</p></ng-template>
-                    </div>
-                </app-qualification>
-                <app-qualification *ngIf="!item.work" [work]="item.work">
-                    <div QUAL>
-                        <h1>{{ item.degree }} - {{ item.name }}</h1>
-                        <div class="text-(--secondary)">
-                            <ol  class="pl-10 pt-3 list-disc">
-                                <li *ngFor="let info of item.infos">{{ info }}</li>
-                            </ol>
+                        <div TIME>
+                            @if (item.end !== null) {
+                                <p>{{ item.start }} – {{ item.end }}</p>
+                            } @else {
+                                <p>{{ item.start }}</p>
+                            }
                         </div>
-                    </div>
-                    <div TIME>
-                        <ng-container *ngIf="item.end !== null; then thenBlock; else elseBlock"></ng-container>
-                        <ng-template #thenBlock><p>{{ item.start }} – {{ item.end }}</p></ng-template>
-                        <ng-template #elseBlock><p>{{ item.start }}</p></ng-template>
-                    </div>
-                </app-qualification>
-            </div>
+                    </app-qualification>
+                } @else {
+                    <app-qualification [work]="item.work">
+                        <div QUAL>
+                            <h1>{{ item.degree }} - {{ item.name }}</h1>
+                            <div class="text-(--secondary)">
+                                <ol  class="pl-10 pt-3 list-disc">
+                                    @for (info of item.infos; track $index) {
+                                        <li>{{ info }}</li>
+                                    }
+                                </ol>
+                            </div>
+                        </div>
+                        <div TIME>
+                            @if (item.end !== null) {
+                                <p>{{ item.start }} – {{ item.end }}</p>
+                            } @else {
+                                <p>{{ item.start }}</p>
+                            }
+                        </div>
+                    </app-qualification>
+                }
+            }
         </div>
     </div>
 </div>

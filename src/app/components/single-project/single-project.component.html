@@ -24,26 +24,30 @@
                             </svg>
                         </div>
                     </a>
-                    <a *ngIf="liveExists" [href]="live" target="_blank" rel="noopener noreferrer" class="hovereffectinverse flex flex-row gap-5 h-13 w-auto justify-around items-center border-1 rounded-full border-(--primary) bg-(--primary) p-2 cursor-pointer hover:opacity-100 transition-colors ease-[cubic-bezier(.47,1.64,.41,.8)] duration-500">
-                        <div class="size-full flex flex-row justify-between items-center gap-5">
-                            <h1 class="text-(--background) break-inside-avoid">LIVE PROJECT</h1>
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full">
-                                <g id="SVGRepo_iconCarrier">
-                                    <path d="M5 12V6C5 5.44772 5.44772 5 6 5H18C18.5523 5 19 5.44772 19 6V18C19 18.5523 18.5523 19 18 19H12M8.11111 12H12M12 12V15.8889M12 12L5 19" stroke="var(--background)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </g>
-                            </svg>
-                        </div>
-                    </a>
-                    <a *ngIf="downloadExists" [href]="download" target="_blank" rel="noopener noreferrer" class="hovereffectinverse flex flex-row gap-5 h-13 w-auto justify-around items-center border-1 rounded-full border-(--primary) bg-(--primary) p-2 cursor-pointer hover:opacity-100 transition-colors ease-[cubic-bezier(.47,1.64,.41,.8)] duration-500">
-                        <div class="size-full flex flex-row justify-between items-center gap-5">
-                            <h1 class="text-(--background) break-inside-avoid">DOWNLOAD PROJECT</h1>
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full">
-                                <g id="SVGRepo_iconCarrier">
-                                    <path d="M5 12V6C5 5.44772 5.44772 5 6 5H18C18.5523 5 19 5.44772 19 6V18C19 18.5523 18.5523 19 18 19H12M8.11111 12H12M12 12V15.8889M12 12L5 19" stroke="var(--background)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </g>
-                            </svg>
-                        </div>
-                    </a>
+                    @if (liveExists) {
+                        <a [href]="live" target="_blank" rel="noopener noreferrer" class="hovereffectinverse flex flex-row gap-5 h-13 w-auto justify-around items-center border-1 rounded-full border-(--primary) bg-(--primary) p-2 cursor-pointer hover:opacity-100 transition-colors ease-[cubic-bezier(.47,1.64,.41,.8)] duration-500">
+                            <div class="size-full flex flex-row justify-between items-center gap-5">
+                                <h1 class="text-(--background) break-inside-avoid">LIVE PROJECT</h1>
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full">
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path d="M5 12V6C5 5.44772 5.44772 5 6 5H18C18.5523 5 19 5.44772 19 6V18C19 18.5523 18.5523 19 18 19H12M8.11111 12H12M12 12V15.8889M12 12L5 19" stroke="var(--background)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                        </a>
+                    }
+                    @if (downloadExists) {
+                        <a [href]="download" target="_blank" rel="noopener noreferrer" class="hovereffectinverse flex flex-row gap-5 h-13 w-auto justify-around items-center border-1 rounded-full border-(--primary) bg-(--primary) p-2 cursor-pointer hover:opacity-100 transition-colors ease-[cubic-bezier(.47,1.64,.41,.8)] duration-500">
+                            <div class="size-full flex flex-row justify-between items-center gap-5">
+                                <h1 class="text-(--background) break-inside-avoid">DOWNLOAD PROJECT</h1>
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full">
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path d="M5 12V6C5 5.44772 5.44772 5 6 5H18C18.5523 5 19 5.44772 19 6V18C19 18.5523 18.5523 19 18 19H12M8.11111 12H12M12 12V15.8889M12 12L5 19" stroke="var(--background)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                        </a>
+                    }
                 </div>
 
                 <h1 class="md:text-lg lg:text-xl xl:text-2xl mt-5">Techstack:</h1>

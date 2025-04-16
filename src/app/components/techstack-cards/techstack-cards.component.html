@@ -3,8 +3,8 @@
         <h1>{{ title }}</h1>
     </div>
     <div class="flex flex-row gap-3 flex-wrap p-3 justify-center">
-        <div *ngFor="let item of contents">
+        @for (item of contents; track $index) {
             <app-svgs [name]="item"></app-svgs>
-        </div>
+        }
     </div>
 </div>

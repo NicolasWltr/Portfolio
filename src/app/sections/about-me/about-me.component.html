@@ -19,9 +19,11 @@
         <h1 class="text-(--text) text-center font-bold underline-offset-5 underline text-4xl xl:text-5xl lg:row-1 lg-col-2">Techstack</h1>
         <div class="w-full lg:col-2">
             <ul class="grid grid-cols-1 gap-5">
-            <li *ngFor="let item of techStack">
-                    <app-techstack-cards [title]="item.title" [contents]="item.contents"></app-techstack-cards>
-                </li>
+                @for (item of techStack; track $index) {
+                    <li>
+                        <app-techstack-cards [title]="item.title" [contents]="item.contents"></app-techstack-cards>
+                    </li>
+                }
             </ul>
         </div>
     </div>
