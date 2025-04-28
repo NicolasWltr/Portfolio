@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /controller
+Disallow: /dashboard
 
 Sitemap: https://www.walternicolas.de/sitemap.xml
 Sitemap: https://walternicolas.de/sitemap.xml
