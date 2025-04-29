@@ -1,6 +1,9 @@
 <div class="w-full h-auto grid md:grid-cols-2 md:grid-rows-1 relative md:gap-10 md:text-lg lg:text-xl xl:text-2xl ">
-    <div class="size-full md:row-1 px-15 md:px-5"
-    [ngClass]="{ 'md:col-2': work}">
+    <div class="size-full md:row-1 ps-15"
+    [ngClass]="{ 
+        'md:col-2 md:ps-5': work,
+        'md:ps-0 md:pe-5': !work
+     }">
         <div class="bg-(--accent) p-5 rounded-xl">
             <ng-content select="[QUAL]"></ng-content>
         </div>
