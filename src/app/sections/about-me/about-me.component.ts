@@ -2,12 +2,14 @@ import { Component } from '@angular/core';
 import { TechstackCardsComponent } from "../../components/techstack-cards/techstack-cards.component";
 import { CommonModule } from '@angular/common';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { AnimateOnEnterComponent } from '../../components/animate-on-enter/animate-on-enter.component';
 
 @Component({
   selector: 'app-about-me',
   imports: [
     TechstackCardsComponent,
-    CommonModule
+    CommonModule,
+    AnimateOnEnterComponent
   ],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss'
