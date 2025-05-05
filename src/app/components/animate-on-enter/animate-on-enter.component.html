@@ -1,0 +1,18 @@
+<div #wrapper class="relative"
+[ngClass]="{
+    'z-100' : alwaysOnTop
+}">
+    <div #animator
+    class="transition-all"
+    [ngClass]="{
+        'ease-[cubic-bezier(.39,.04,.35,1.4)]' : bouncy,
+        'opacity-0' : ['slide-left', 'slide-right', 'slide-up', 'rotate-right', 'rotate-left'].includes(animationType) && !wasOnScreen,
+        'translate-x-full' : animationType === 'slide-left' && !wasOnScreen,
+        '-translate-x-full' : animationType === 'slide-right' && !wasOnScreen,
+        'translate-y-50' : animationType === 'slide-up' && !wasOnScreen,
+        'rotate-90' : animationType === 'rotate-left' && !wasOnScreen,
+        '-rotate-90' : animationType === 'rotate-right' && !wasOnScreen,
+    }">
+        <ng-content></ng-content>
+    </div>
+</div>
