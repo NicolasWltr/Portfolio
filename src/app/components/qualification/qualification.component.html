@@ -4,9 +4,11 @@
         'md:col-2 md:ps-5': work,
         'md:ps-0 md:pe-5': !work
      }">
-        <div class="bg-(--accent) p-5 rounded-xl">
-            <ng-content select="[QUAL]"></ng-content>
-        </div>
+     <wrap-animate-on-enter [transformOrigin]="(work || split) ? '0% 0%' : '100% 0%'" [animationType]="(work || split) ? 'rotate-left' : 'rotate-right'" [bouncy]="true" [offset]="200">
+         <div class="bg-(--accent) p-5 rounded-xl">
+             <ng-content select="[QUAL]"></ng-content>
+         </div>
+     </wrap-animate-on-enter>
     </div>
     <div class="size-mins row-1"
     [ngClass]="{ 'md:col-1 md:text-right': work}">
