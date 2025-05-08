@@ -40,7 +40,7 @@
                         <input type="email" placeholder="To get back to you" class="w-full bg-(--background) border-2 border-(--primary) rounded-3xl p-2 text-(--text)" formControlName="email" required
                         [ngClass]="{
                             'border-red-900' : contactForm.get('email')?.invalid && (contactForm.get('email')?.touched || contactForm.get('email')?.dirty),
-                            'border-(--primary)' : contactForm.get('name')?.valid || (!contactForm.get('name')?.touched || !contactForm.get('name')?.dirty)
+                            'border-(--primary)' : contactForm.get('email')?.valid || (!contactForm.get('email')?.touched || !contactForm.get('email')?.dirty)
                         }">
                         <div class="size-full p-1 absolute top-0 left-0 pointer-events-none">
                             <h1 class="size-full px-3 py-[.35em] lg:py-[.25em] text-(--secondary) bg-(--background) rounded-4xl transition-transform no sm:sm md:md lg:lg xl:xl">E-Mail<span>*</span></h1>
@@ -50,7 +50,7 @@
                         <textarea type="text" placeholder=" " class="min-h-40 h-auto w-full bg-(--background) border-2 border-(--primary) rounded-3xl p-2 text-(--text) text-wrap" formControlName="message" required
                         [ngClass]="{
                             'border-red-900' : contactForm.get('message')?.invalid && (contactForm.get('message')?.touched || contactForm.get('message')?.dirty),
-                            'border-(--primary)' : contactForm.get('name')?.valid || (!contactForm.get('name')?.touched || !contactForm.get('name')?.dirty)
+                            'border-(--primary)' : contactForm.get('message')?.valid || (!contactForm.get('message')?.touched || !contactForm.get('message')?.dirty)
                         }"></textarea>
                         <div class="w-full h-10 p-1 absolute top-0 left-0 pointer-events-none">
                             <h1 class="size-full px-3 py-[.35em] lg:py-[.25em] text-(--secondary) bg-(--background) rounded-4xl transition-transform">Message<span>*</span></h1>
