@@ -7,99 +7,108 @@
                 </div>
             </div>
         </div>
-        <app-single-project name="Tic-Tac-Toe Variation" code="https://www.github.com/NicolasWltr/TicTacToe" live="https://games.walternicolas.de/tictactoe" [reverse]="false">
-            <div Text class="md:text-lg lg:text-xl xl:text-2xl [&>p]:[&>span]:text-(--primary) flex-col flex gap-5">
-                <p>A Variation of the classic game Tic-Tac-Toe, with <span>more complex</span> game modes, that allows you to <span>play with anyone around the world</span> or with 2 players on one device.</p> 
+
+        <wrap-animate-on-enter [offset]="200" [animationType]="'slide-left'" [bouncy]="true">
+            <app-single-project name="Tic-Tac-Toe Variation" code="https://www.github.com/NicolasWltr/TicTacToe" live="https://games.walternicolas.de/tictactoe" [reverse]="false">
+                <div Text class="md:text-lg lg:text-xl xl:text-2xl [&>p]:[&>span]:text-(--primary) flex-col flex gap-5">
+                    <p>A Variation of the classic game Tic-Tac-Toe, with <span>more complex</span> game modes, that allows you to <span>play with anyone around the world</span> or with 2 players on one device.</p> 
+                    
+                    <p>Simply click <span><a class="underline" href="https://games.walternicolas.de/tictactoe" target="_blank" rel="noopener noreferrer">here</a></span> or the <span>LIVE PROJECT</span> button below to open the game in the browser and you're ready to play the most complicated forms of TicTacToe.</p>
+    
+                    <p>For this game the frontend is build using <span>Angular</span> with the style beeing done with <span>Tailwind CSS</span>.</p>
+    
+                    <p>For the backend I used <span>NestJS</span> with the <span>socket.io</span> library to transfere the current game state live from one player to the other.</p>
+    
+                    <p>The app supports <span>multiple games</span> around the globe.</p>
+    
+                    <p>For a little introduction on how to play this game (especially the harder versions of it), follow <span><a href="" target="_blank" rel="noopener noreferrer">this link</a></span> (TBD).</p>
+                </div>
+                <div Image class="">
+                    @if (dark()) {
+                        <img Image class="w-full h-auto rounded-4xl object-fit-contain border-5 border-white" src="ttt.webp" alt="TicTacToe Variation">
+                    } @else {
+                        <img Image class="w-full h-auto rounded-4xl object-fit-contain border-5 border-black" src="ttt_light.webp" alt="TicTacToe Variation">
+                    }
+                </div>
+                <div TS class="w-full flex flex-row justify-start gap-5 flex-wrap">
+                    
+                    <app-svgs name="Angular"></app-svgs>
+                    <app-svgs name="Tailwind CSS"></app-svgs>
+                    <app-svgs name="NestJS"></app-svgs>
+                    <app-svgs name="Socket.IO"></app-svgs>
+                </div>
+            </app-single-project>
+        </wrap-animate-on-enter>
+
+
+        <wrap-animate-on-enter [offset]="200" [animationType]="'slide-right'" [bouncy]="true">
+            <svg viewBox="0 0 1440 120" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <path fill="var(--background-alt)" stroke="var(--background-alt)" stroke-width="1" d="M0,108L10,98C20,88,40,68,60,50C80,32,100,16,120,18C140,20,160,40,180,44C200,48,220,36,240,36C260,36,280,48,300,54C320,60,340,60,360,64C380,68,400,76,420,68C440,60,460,36,480,38C500,40,520,68,540,78C560,88,580,80,600,70C620,60,640,48,660,54C680,60,700,84,720,94C740,104,760,100,780,98C800,96,820,96,840,96C860,96,880,96,900,80C920,64,940,32,960,32C980,32,1000,64,1020,66C1040,68,1060,40,1080,38C1100,36,1120,60,1140,64C1160,68,1180,52,1200,56C1220,60,1240,84,1260,94C1280,104,1300,100,1320,86C1340,72,1360,48,1380,46C1400,44,1420,64,1430,74L1440,84L1440,120L1430,120C1420,120,1400,120,1380,120C1360,120,1340,120,1320,120C1300,120,1280,120,1260,120C1240,120,1220,120,1200,120C1180,120,1160,120,1140,120C1120,120,1100,120,1080,120C1060,120,1040,120,1020,120C1000,120,980,120,960,120C940,120,920,120,900,120C880,120,860,120,840,120C820,120,800,120,780,120C760,120,740,120,720,120C700,120,680,120,660,120C640,120,620,120,600,120C580,120,560,120,540,120C520,120,500,120,480,120C460,120,440,120,420,120C400,120,380,120,360,120C340,120,320,120,300,120C280,120,260,120,240,120C220,120,200,120,180,120C160,120,140,120,120,120C100,120,80,120,60,120C40,120,20,120,10,120L0,120Z"></path>
+            </svg>
+            <app-single-project name="Bejeweled Clone" code="https://github.com/NicolasWltr/BejweledClone" download="https://github.com/NicolasWltr/BejweledClone/releases/tag/Download" [reverse]="true" [liveExists]="false" [downloadExists]="true">
+                <div Text class="md:text-lg lg:text-xl xl:text-2xl [&>p]:[&>span]:text-(--primary) flex-col flex gap-5">
+                    <p>I created this clone of Bejeweled at university together with 2 other fellow students</p>
+    
+                    <p>We added some <span>twists</span> to the form of the field, as well as the optional feature to generate the field with holes to make the game harder</p>
+    
+                    <p>To <span>play</span> this game click <span><a class="underline" href="https://github.com/NicolasWltr/BejweledClone/releases/tag/Download" target="_blank" rel="noopener noreferrer">here</a></span> or the <span>DOWNLOAD PROJECT</span> button below to download the <span><code>.exe / .app</code></span>.</p>
+    
+                    <p>We built this game using the <span>Unity Engine</span> and thus <span>C#</span></p>
+    
+                    <p>You can play this game <span>alone</span> or on the <span>same device</span> against one friend</p>
+    
+    
+                </div>
                 
-                <p>Simply click <span><a class="underline" href="https://games.walternicolas.de/tictactoe" target="_blank" rel="noopener noreferrer">here</a></span> or the <span>LIVE PROJECT</span> button below to open the game in the browser and you're ready to play the most complicated forms of TicTacToe.</p>
-
-                <p>For this game the frontend is build using <span>Angular</span> with the style beeing done with <span>Tailwind CSS</span>.</p>
-
-                <p>For the backend I used <span>NestJS</span> with the <span>socket.io</span> library to transfere the current game state live from one player to the other.</p>
-
-                <p>The app supports <span>multiple games</span> around the globe.</p>
-
-                <p>For a little introduction on how to play this game (especially the harder versions of it), follow <span><a href="" target="_blank" rel="noopener noreferrer">this link</a></span> (TBD).</p>
-            </div>
-            <div Image class="">
-                @if (dark()) {
-                    <img Image class="w-full h-auto rounded-4xl object-fit-contain border-5 border-white" src="ttt.webp" alt="TicTacToe Variation">
-                } @else {
-                    <img Image class="w-full h-auto rounded-4xl object-fit-contain border-5 border-black" src="ttt_light.webp" alt="TicTacToe Variation">
-                }
-            </div>
-            <div TS class="w-full flex flex-row justify-start gap-5 flex-wrap">
+                <div Image class="grid grid-cols-2 border-5 rounded-4xl border-(--text) overflow-hidden">
+                    <img Image class="w-full h-auto object-fit-contain border-r-2 border-b-2" src="bj1.webp" alt="Bejeweled Clone">
+                    <img Image class="w-full h-auto object-fit-contain border-l-2 border-b-2" src="bj2.webp" alt="Bejeweled Clone">
+                    <img Image class="w-full h-auto object-fit-contain border-r-2 border-t-2" src="bj3.webp" alt="Bejeweled Clone">
+                    <img Image class="w-full h-auto object-fit-contain border-l-2 border-t-2" src="bj4.webp" alt="Bejeweled Clone">
+                </div>
                 
-                <app-svgs name="Angular"></app-svgs>
-                <app-svgs name="Tailwind CSS"></app-svgs>
-                <app-svgs name="NestJS"></app-svgs>
-                <app-svgs name="Socket.IO"></app-svgs>
-            </div>
-        </app-single-project>
+                <div TS class="w-full flex flex-row justify-start gap-5 flex-wrap">
+                    <app-svgs name="C#"></app-svgs>
+                    <app-svgs name="Unity"></app-svgs>
+                </div>
+            </app-single-project>
+            <svg style="transform:rotate(180deg)" viewBox="0 0 1440 120" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <path fill="var(--background-alt)" stroke="var(--background-alt)" stroke-width="1" d="M0,48L10,44C20,40,40,32,60,24C80,16,100,8,120,12C140,16,160,32,180,50C200,68,220,88,240,92C260,96,280,84,300,76C320,68,340,64,360,70C380,76,400,92,420,94C440,96,460,84,480,72C500,60,520,48,540,46C560,44,580,52,600,46C620,40,640,20,660,24C680,28,700,56,720,66C740,76,760,68,780,64C800,60,820,60,840,68C860,76,880,92,900,96C920,100,940,92,960,90C980,88,1000,92,1020,86C1040,80,1060,64,1080,64C1100,64,1120,80,1140,74C1160,68,1180,40,1200,38C1220,36,1240,60,1260,66C1280,72,1300,60,1320,46C1340,32,1360,16,1380,16C1400,16,1420,32,1430,40L1440,48L1440,120L1430,120C1420,120,1400,120,1380,120C1360,120,1340,120,1320,120C1300,120,1280,120,1260,120C1240,120,1220,120,1200,120C1180,120,1160,120,1140,120C1120,120,1100,120,1080,120C1060,120,1040,120,1020,120C1000,120,980,120,960,120C940,120,920,120,900,120C880,120,860,120,840,120C820,120,800,120,780,120C760,120,740,120,720,120C700,120,680,120,660,120C640,120,620,120,600,120C580,120,560,120,540,120C520,120,500,120,480,120C460,120,440,120,420,120C400,120,380,120,360,120C340,120,320,120,300,120C280,120,260,120,240,120C220,120,200,120,180,120C160,120,140,120,120,120C100,120,80,120,60,120C40,120,20,120,10,120L0,120Z"></path>
+            </svg>
+        </wrap-animate-on-enter>
 
-        <svg viewBox="0 0 1440 120" version="1.1" xmlns="http://www.w3.org/2000/svg">
-            <path fill="var(--background-alt)" stroke="var(--background-alt)" stroke-width="1" d="M0,108L10,98C20,88,40,68,60,50C80,32,100,16,120,18C140,20,160,40,180,44C200,48,220,36,240,36C260,36,280,48,300,54C320,60,340,60,360,64C380,68,400,76,420,68C440,60,460,36,480,38C500,40,520,68,540,78C560,88,580,80,600,70C620,60,640,48,660,54C680,60,700,84,720,94C740,104,760,100,780,98C800,96,820,96,840,96C860,96,880,96,900,80C920,64,940,32,960,32C980,32,1000,64,1020,66C1040,68,1060,40,1080,38C1100,36,1120,60,1140,64C1160,68,1180,52,1200,56C1220,60,1240,84,1260,94C1280,104,1300,100,1320,86C1340,72,1360,48,1380,46C1400,44,1420,64,1430,74L1440,84L1440,120L1430,120C1420,120,1400,120,1380,120C1360,120,1340,120,1320,120C1300,120,1280,120,1260,120C1240,120,1220,120,1200,120C1180,120,1160,120,1140,120C1120,120,1100,120,1080,120C1060,120,1040,120,1020,120C1000,120,980,120,960,120C940,120,920,120,900,120C880,120,860,120,840,120C820,120,800,120,780,120C760,120,740,120,720,120C700,120,680,120,660,120C640,120,620,120,600,120C580,120,560,120,540,120C520,120,500,120,480,120C460,120,440,120,420,120C400,120,380,120,360,120C340,120,320,120,300,120C280,120,260,120,240,120C220,120,200,120,180,120C160,120,140,120,120,120C100,120,80,120,60,120C40,120,20,120,10,120L0,120Z"></path>
-        </svg>
-
-        <app-single-project name="Bejeweled Clone" code="https://github.com/NicolasWltr/BejweledClone" download="https://github.com/NicolasWltr/BejweledClone/releases/tag/Download" [reverse]="true" [liveExists]="false" [downloadExists]="true">
-            <div Text class="md:text-lg lg:text-xl xl:text-2xl [&>p]:[&>span]:text-(--primary) flex-col flex gap-5">
-                <p>I created this clone of Bejeweled at university together with 2 other fellow students</p>
-
-                <p>We added some <span>twists</span> to the form of the field, as well as the optional feature to generate the field with holes to make the game harder</p>
-
-                <p>To <span>play</span> this game click <span><a class="underline" href="https://github.com/NicolasWltr/BejweledClone/releases/tag/Download" target="_blank" rel="noopener noreferrer">here</a></span> or the <span>DOWNLOAD PROJECT</span> button below to download the <span><code>.exe / .app</code></span>.</p>
-
-                <p>We built this game using the <span>Unity Engine</span> and thus <span>C#</span></p>
-
-                <p>You can play this game <span>alone</span> or on the <span>same device</span> against one friend</p>
-
-
-            </div>
-            
-            <div Image class="grid grid-cols-2 border-5 rounded-4xl border-(--text) overflow-hidden">
-                <img Image class="w-full h-auto object-fit-contain border-r-2 border-b-2" src="bj1.webp" alt="Bejeweled Clone">
-                <img Image class="w-full h-auto object-fit-contain border-l-2 border-b-2" src="bj2.webp" alt="Bejeweled Clone">
-                <img Image class="w-full h-auto object-fit-contain border-r-2 border-t-2" src="bj3.webp" alt="Bejeweled Clone">
-                <img Image class="w-full h-auto object-fit-contain border-l-2 border-t-2" src="bj4.webp" alt="Bejeweled Clone">
-            </div>
-            
-            <div TS class="w-full flex flex-row justify-start gap-5 flex-wrap">
-                <app-svgs name="C#"></app-svgs>
-                <app-svgs name="Unity"></app-svgs>
-            </div>
-        </app-single-project>
         
-        <svg style="transform:rotate(180deg)" viewBox="0 0 1440 120" version="1.1" xmlns="http://www.w3.org/2000/svg">
-            <path fill="var(--background-alt)" stroke="var(--background-alt)" stroke-width="1" d="M0,48L10,44C20,40,40,32,60,24C80,16,100,8,120,12C140,16,160,32,180,50C200,68,220,88,240,92C260,96,280,84,300,76C320,68,340,64,360,70C380,76,400,92,420,94C440,96,460,84,480,72C500,60,520,48,540,46C560,44,580,52,600,46C620,40,640,20,660,24C680,28,700,56,720,66C740,76,760,68,780,64C800,60,820,60,840,68C860,76,880,92,900,96C920,100,940,92,960,90C980,88,1000,92,1020,86C1040,80,1060,64,1080,64C1100,64,1120,80,1140,74C1160,68,1180,40,1200,38C1220,36,1240,60,1260,66C1280,72,1300,60,1320,46C1340,32,1360,16,1380,16C1400,16,1420,32,1430,40L1440,48L1440,120L1430,120C1420,120,1400,120,1380,120C1360,120,1340,120,1320,120C1300,120,1280,120,1260,120C1240,120,1220,120,1200,120C1180,120,1160,120,1140,120C1120,120,1100,120,1080,120C1060,120,1040,120,1020,120C1000,120,980,120,960,120C940,120,920,120,900,120C880,120,860,120,840,120C820,120,800,120,780,120C760,120,740,120,720,120C700,120,680,120,660,120C640,120,620,120,600,120C580,120,560,120,540,120C520,120,500,120,480,120C460,120,440,120,420,120C400,120,380,120,360,120C340,120,320,120,300,120C280,120,260,120,240,120C220,120,200,120,180,120C160,120,140,120,120,120C100,120,80,120,60,120C40,120,20,120,10,120L0,120Z"></path>
-        </svg>
 
-        <app-single-project name="Gravity Roller" code="https://github.com/NicolasWltr/GravityRoller" [liveExists]="false">
-            <div Text class="md:text-lg lg:text-xl xl:text-2xl [&>p]:[&>span]:text-(--primary) flex-col flex gap-5">
-                <p>A <span>2d-platformer</span> mobile game I <span>designed</span>, <span>developed</span> and <span>deployed</span> during and after my abitur.</p>
+        <wrap-animate-on-enter [offset]="200" [animationType]="'slide-left'" [bouncy]="true">
+            <app-single-project name="Gravity Roller" code="https://github.com/NicolasWltr/GravityRoller" [liveExists]="false">
+                <div Text class="md:text-lg lg:text-xl xl:text-2xl [&>p]:[&>span]:text-(--primary) flex-col flex gap-5">
+                    <p>A <span>2d-platformer</span> mobile game I <span>designed</span>, <span>developed</span> and <span>deployed</span> during and after my abitur.</p>
+    
+                    <p>You play the little ball and you can move and jump from all <span>floors</span>, <span>walls</span> and <span>ceillings</span>. But watch out not to fall down or die from the obstacles in the course.</p>
+    
+                    <p>It's possible to play this game on <span>time</span>, where you need to master each stage in the given order or to play in an <span>endless</span> mode, where all stages appear in <span>random</span> order one after another.</p>
+    
+                    <p>Get the <span>lowest time</span> or the <span>highest score</span> to set new highscores boths gamemodes.</p>
+    
+                    <p>The game is built using the Unity <span>Unity Engine</span> and <span>C#</span></p>
+    
+                    <p>Sadly the game is not available in the <span>AppStore</span> and <span>PlayStore</span> so it's not possible to play the game as easy.</p>
+                </div>
+                
+                <div Image class="">
+                    @if (dark()) {
+                        <img Image class="w-full h-auto rounded-4xl object-fit-contain border-5 border-(--text)" src="gr.webp" alt="Gravity Roller">
+                    } @else {
+                        <img Image class="w-full h-auto rounded-4xl object-fit-contain border-5 border-(--text)" src="gr_light.webp" alt="Gravity Roller">
+                    }
+                </div>
+                
+                <div TS class="w-full flex flex-row justify-start gap-5 flex-wrap">
+                    <app-svgs name="C#"></app-svgs>
+                    <app-svgs name="Unity"></app-svgs>
+                </div>
+            </app-single-project>
+        </wrap-animate-on-enter>
 
-                <p>You play the little ball and you can move and jump from all <span>floors</span>, <span>walls</span> and <span>ceillings</span>. But watch out not to fall down or die from the obstacles in the course.</p>
-
-                <p>It's possible to play this game on <span>time</span>, where you need to master each stage in the given order or to play in an <span>endless</span> mode, where all stages appear in <span>random</span> order one after another.</p>
-
-                <p>Get the <span>lowest time</span> or the <span>highest score</span> to set new highscores boths gamemodes.</p>
-
-                <p>The game is built using the Unity <span>Unity Engine</span> and <span>C#</span></p>
-
-                <p>Sadly the game is not available in the <span>AppStore</span> and <span>PlayStore</span> so it's not possible to play the game as easy.</p>
-            </div>
-            
-            <div Image class="">
-                @if (dark()) {
-                    <img Image class="w-full h-auto rounded-4xl object-fit-contain border-5 border-(--text)" src="gr.webp" alt="Gravity Roller">
-                } @else {
-                    <img Image class="w-full h-auto rounded-4xl object-fit-contain border-5 border-(--text)" src="gr_light.webp" alt="Gravity Roller">
-                }
-            </div>
-            
-            <div TS class="w-full flex flex-row justify-start gap-5 flex-wrap">
-                <app-svgs name="C#"></app-svgs>
-                <app-svgs name="Unity"></app-svgs>
-            </div>
-        </app-single-project>
     </div>
 </div>

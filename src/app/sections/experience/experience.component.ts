@@ -29,10 +29,10 @@ export class ExperienceComponent {
       name: 'University of Würzburg',
       degree: 'B.Sc. Computer Science',
       start: 'October 2022',
-      end: 'Now',
+      end: 'September 2025',
       infos: [
-        "Expected Graduation: SS 2025",
-        "Preliminary Grade: 2,0"
+        "Graduation: SS 2025",
+        "Grade: 1,9"
       ],
       work: false
     },
