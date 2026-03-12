@@ -1,0 +1,152 @@
+.contractDetails {
+  font-family: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  padding-left: 1.25cm;
+  padding-right: 1.25cm;
+  max-width: 850px;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+}
+
+/* Body text paragraphs */
+.contractDetails p.BodyLeft,
+.contractDetails p.Body {
+  margin-left: 0 !important;
+  margin-bottom: 1em;
+}
+
+.contractDetails p.BodyLeft p,
+.contractDetails p.Body p {
+  margin-left: 0 !important;
+}
+
+.contractDetails p.BodyLeft p span,
+.contractDetails p.Body p span {
+  margin-left: 0 !important;
+}
+
+.contractDetails p.BodyLeft p span span,
+.contractDetails p.Body p span span {
+  margin-left: 0 !important;
+}
+
+.contractDetails h1.DieterHeading1 {
+  text-align: center;
+}
+
+/* Main heading */
+.contractDetails h1.DieterHeading1,
+.contractDetails h2.HeadingLeft {
+  margin-bottom: 2rem;
+  margin-top: 0;
+
+}
+
+/* Section headings (level 2) */
+.contractDetails h2.DieterHeading2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Subsection headings (level 3) */
+.contractDetails h3.DieterHeading3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Numbered paragraphs using DieterHeading3 (long content - looks like body text) */
+.contractDetails h3.DieterHeading3--paragraph {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-top: 1rem;
+  margin-bottom: 1em;
+}
+
+/* Sub-subsection headings (level 4) */
+.contractDetails h4.DieterHeading4 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Numbered paragraphs using DieterHeading4 (long content - looks like body text) */
+.contractDetails h4.DieterHeading4--paragraph {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-top: 1rem;
+  margin-bottom: 1em;
+}
+
+.contractDetails .DieterHeading2 span:not(.number-prefix-p) {
+  margin-left: 0 !important;
+}
+
+.contractDetails .DieterHeading2 .number-prefix-p,
+.contractDetails .DieterHeading3 .number-prefix-p,
+.contractDetails .DieterHeading4 .number-prefix-p {
+  display: inline-block;
+  width: 1.25cm;
+  margin-left: -1.25cm;
+}
+
+/* Lists */
+.contractDetails .DieterLista,
+.contractDetails .DieterListi,
+.contractDetails .BulletList1 {
+  padding-left: 1.25cm;
+  margin-bottom: 0.75em;
+}
+
+.contractDetails .DieterLista .number-prefix-p,
+.contractDetails .DieterListi .number-prefix-p,
+.contractDetails .BulletList1 .number-prefix-p {
+  margin-left: -1.25cm;
+  display: inline-block;
+  width: 1.25cm;
+}
+
+.contractDetails .DieterListaIndent,
+.contractDetails .DieterListiIndent,
+.contractDetails .BulletList2 .number-prefix-p {
+  margin-left: 1.25cm;
+  display: inline-block;
+  width: 1.25cm;
+}
+
+.contractDetails .BulletListNoIndent {
+  margin-left: 0 !important;
+  margin-bottom: 0.75em;
+}
+
+.contractDetails .BulletListNoIndent span {
+  text-indent: 0;
+}
+
+.contractDetails .BulletListNoIndent .number-prefix-p {
+  display: inline-block;
+  width: 1.25cm;
+  margin-left: -1.25cm;
+}
+
+.contractDetails .BulletListNoIndent span:not(.number-prefix-p) {
+  text-indent: 1.25cm !important;
+}
+
+.contractDetails .HeadingLeft {
+  margin-left: 0 !important;
+}
+
+.contractDetails .HeadingLeft span {
+  margin-left: 0 !important;
+}
+
+/* Snippet containers */
+.contractDetails .snippets-container {
+  margin: 1.5em 0;
+}
+
+.contractDetails .DieterInvisible {
+  display: none;
+}
+
+.contractDetails .multiline {
+  white-space: pre-wrap;
+}

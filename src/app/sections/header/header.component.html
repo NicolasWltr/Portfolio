@@ -1,10 +1,10 @@
 <div #header class="bg-(--primary) rounded-xl mx-5 relative p-[1px] z-1000 transition-all">
     <div class="bg-(--accent) rounded-xl relative z-1 p-3 flex gap-10 items-center flex flex-row justify-between">
 
-        <div class="flex flex-row justify-center items-center">
+        <a class="flex flex-row justify-center items-center" href="/">
             <img src="favicon.ico" alt="N" class="max-h-[2em] hue-rotate-130" [ngClass]="{'hue-rotate-270': !darkMode()}">
             <h1 #nameHeader class="overflow-hidden w-auto sm:max-w-[6ch] max-w-[0] font-mono font-bold text-(--secondary) text-2xl transition-all ease-[steps(6)]">icolas</h1>
-        </div>
+        </a>
         
         <app-color-scheme></app-color-scheme>
     </div>
