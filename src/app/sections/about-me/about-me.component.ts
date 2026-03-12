@@ -30,6 +30,7 @@ export class AboutMeComponent {
       { title: 'Frontend', contents: [
         'Angular',
         'Tailwind CSS',
+        'NextJS',
         'SwiftUI'
       ]},
       { title: 'Backend', contents: [
@@ -39,6 +40,7 @@ export class AboutMeComponent {
         'Socket.IO'
       ]},
       { title: 'Databases', contents: [
+        'PostgreSQL',
         'SQLite',
         "Firebase"
       ]},

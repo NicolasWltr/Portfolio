@@ -15,13 +15,14 @@ export class ExperienceComponent {
 
   qualifications = [
     {
-      name: "Working Student Softwaredevelopment",
-      company: "Fürstlich Castell'sche Bank",
-      start: "August 2023",
-      end: "Februar 2025",
+      name: "IT Consultant",
+      company: "hiqs GmbH",
+      start: "Oktober 2025",
+      end: "today",
       tasks: [
-        "Support in the development of in-house applications",
-        "Support in data quality management"
+        "Development and enhancement of customer-specific software solutions",
+        "Implementation of features and bug fixes in modern web applications",
+        "Collaboration with customer development teams in the implementation and improvement of applications"
       ],
       work: true
     },
@@ -37,14 +38,13 @@ export class ExperienceComponent {
       work: false
     },
     {
-      name: "Internship",
-      company: "SSH GmbH",
-      start: "July 2019",
-      end: null,
+      name: "Working Student Softwaredevelopment",
+      company: "Fürstlich Castell'sche Bank",
+      start: "August 2023",
+      end: "Februar 2025",
       tasks: [
-        "Administration",
-        "Development",
-        "Support"
+        "Support in the development of in-house applications",
+        "Support in data quality management"
       ],
       work: true
     },
@@ -58,53 +58,18 @@ export class ExperienceComponent {
         "Grade: 2,1"
       ],
       work: false
-    }
-  ]
-
-  education = [
-    {
-      name: 'University of Würzburg',
-      degree: 'B.Sc. Computer Science',
-      start: 'October 2022',
-      end: 'Now',
-      infos: [
-        "Expected Graduation: SS 2025",
-        "Preliminary Grade: 2,0"
-      ]
     },
     {
-      name: 'Egbert-Gymnasium-Münsterschwarzach',
-      degree: 'Abitur',
-      start: 'September 2014',
-      end: 'June 2022',
-      infos: [
-        "Scientific and Technological Branch",
-        "Grade: 2,1"
-      ]
-    }
-  ]
-
-  workExperience = [
-    {
-      "name": "Working Student Softwaredevelopment",
-      "company": "Fürstlich Castell'sche Bank",
-      "start": "August 2023",
-      "end": "Februar 2025",
-      "tasks": [
-        "Support in the development of in-house applications",
-        "Support in data quality management"
-      ]
-    },
-    {
-      "name": "Internship",
-      "company": "SSH GmbH",
-      "start": "July 2019",
-      "end": null,
-      "tasks": [
+      name: "Internship",
+      company: "SSH GmbH",
+      start: "July 2019",
+      end: null,
+      tasks: [
         "Administration",
         "Development",
         "Support"
-      ]
-    }
-  ]
+      ],
+      work: true
+    },
+  ];
 }
