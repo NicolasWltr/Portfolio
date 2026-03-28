@@ -1,0 +1,20 @@
+services:
+  portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: portfolio-app
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+    environment:
+      - CADDY_ADMIN=127.0.0.1:2019
+    restart: unless-stopped
+    networks:
+      proxy_net:
+        aliases:
+          - portfolio-proxy
+
+networks:
+  proxy_net:
+    external: true
+    name: global-proxy-net
