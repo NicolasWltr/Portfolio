@@ -10,5 +10,4 @@ services:
       - CADDY_ADMIN=127.0.0.1:2019
     restart: unless-stopped
     ports:
-      - "80:80"
-      - "443:443"
+      - "8081:8081"
